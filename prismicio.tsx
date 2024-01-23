@@ -4,8 +4,8 @@ import sm from "./slicemachine.config.json";
 import { KeyTextField } from "@prismicio/client";
 import Link, { LinkProps } from "next/link";
 
-export const repositoryName = process.env.NEXT_PUBLIC_PRISMIC_ENVIRONMENT
-  ? process.env.NEXT_PUBLIC_PRISMIC_ENVIRONMENT
+export const repositoryName = process.env.NEXT_PUBLIC_PRISMIC_REPO
+  ? process.env.NEXT_PUBLIC_PRISMIC_REPO
   : sm.repositoryName;
 
 // Update the routes array to match your project's route structure
