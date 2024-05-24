@@ -12,6 +12,7 @@ import { asText } from "@prismicio/client";
 import { PrismicNextImage } from "@prismicio/next";
 import { Simplify } from "@prismicio/types/dist/value/types";
 import { FeaturesSliceAboveItem, FeaturesSliceBelowItem } from "@/prismicio-types";
+import { Button } from "@/components/Button";
 
 function Feature({
   feature,
@@ -212,7 +213,25 @@ export default function FeaturesVertical({
                 </p>
               ),
             }}
-          />
+          /><div className="mt-10 lg:flex justify-center gap-x-6">
+          {slice.primary.buttons.map((item, idx) => {
+            return item.link_type === "Primary" ? (
+              <Button key={idx} field={item.link} color="blue">
+                {item.link_label}
+              </Button>
+            ) : (
+              <Button key={idx} field={item.link} variant="outline">
+                <svg
+                  aria-hidden="true"
+                  className="h-3 w-3 flex-none fill-dark-blue group-active:fill-current"
+                >
+                  <path d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z" />
+                </svg>
+                <span className="ml-3 text-black">{item.link_label}</span>
+              </Button>
+            );
+          })}
+        </div>
         </div>
         <FeaturesMobile slice={slice} />
         <FeaturesDesktop slice={slice} above={above} />

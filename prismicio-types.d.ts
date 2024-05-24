@@ -2004,6 +2004,16 @@ export interface FeaturesSliceAbovePrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   anchor: prismic.KeyTextField;
+
+  /**
+   * Buttons field in *Features → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features.primary.buttons[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  buttons: prismic.GroupField<Simplify<FeaturesDocumentDataButtonsItem>>;
 }
 
 /**
@@ -2107,6 +2117,16 @@ export interface FeaturesSliceBelowPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   anchor: prismic.KeyTextField;
+
+  /**
+   * Buttons field in *Features → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: features.primary.buttons[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  buttons: prismic.GroupField<Simplify<FeaturesDocumentDataButtonsItem>>;
 }
 
 /**
@@ -4132,8 +4152,10 @@ declare module "@prismicio/client" {
       FeaturesSliceRightSideItem,
       FeaturesSliceLeftSidePrimary,
       FeaturesSliceLeftSideItem,
+      FeaturesDocumentDataButtonsItem,
       FeaturesSliceAbovePrimary,
       FeaturesSliceAboveItem,
+      FeaturesDocumentDataButtonsItem,
       FeaturesSliceBelowPrimary,
       FeaturesSliceBelowItem,
       FeaturesSliceVariation,

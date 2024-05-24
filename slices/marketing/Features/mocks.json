@@ -28,6 +28,42 @@
 						"direction": "ltr"
 					}
 				]
+			},
+			"buttons": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"link_label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "cover",
+									"type": "Text"
+								}
+							],
+							[
+								"link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com"
+									}
+								}
+							],
+							[
+								"link_type",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Text Link",
+									"type": "Select"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		"items": [
@@ -592,6 +628,42 @@
 						"direction": "ltr"
 					}
 				]
+			},
+			"buttons": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"link_label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "love",
+									"type": "Text"
+								}
+							],
+							[
+								"link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://google.com"
+									}
+								}
+							],
+							[
+								"link_type",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "Primary",
+									"type": "Select"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		"items": [
@@ -933,6 +1005,55 @@
 							"spans": []
 						},
 						"direction": "ltr"
+					}
+				]
+			},
+			"buttons": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"link_label",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Check it out"
+								}
+							],
+							[
+								"link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com"
+									}
+								}
+							],
+							[
+								"link_type",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "Primary"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"link_label",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Watch here"
+								}
+							]
+						]
 					}
 				]
 			}
