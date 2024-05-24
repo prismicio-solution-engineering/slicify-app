@@ -215,6 +215,7 @@ export default function FeaturesVertical({
             }}
           /><div className="mt-10 lg:flex justify-center gap-x-6">
           {slice.primary.buttons.map((item, idx) => {
+            //for devtools and renaud
             return item.link_type === "Primary" ? (
               <Button key={idx} field={item.link} color="blue">
                 {item.link_label}
