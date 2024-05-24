@@ -74,7 +74,7 @@ function FeaturesMobile({
 }) {
   return (
     <div className="-mx-4 mt-20 flex flex-col gap-y-10 overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:hidden">
-      {slice.items.map((feature) => (
+      {slice.primary.cards.map((feature) => (
         <div key={asText(feature.feature_title)}>
           <Feature feature={feature} className="mx-auto max-w-2xl" isActive />
           <div className="relative mt-10 pb-10">
@@ -106,7 +106,7 @@ function FeaturesDesktop({
         <>
           {!above && (
             <Tab.List className="grid grid-cols-3 gap-x-8">
-              {slice.items.map((feature, featureIndex) => (
+              {slice.primary.cards.map((feature, featureIndex) => (
                 <Feature
                   key={asText(feature.feature_title)}
                   feature={{
@@ -130,7 +130,7 @@ function FeaturesDesktop({
             }`}
           >
             <div className="-mx-5 flex">
-              {slice.items.map((feature, featureIndex) => (
+              {slice.primary.cards.map((feature, featureIndex) => (
                 <Tab.Panel
                   static
                   key={asText(feature.feature_title)}
@@ -155,7 +155,7 @@ function FeaturesDesktop({
           </Tab.Panels>
           {above && (
             <Tab.List className="grid grid-cols-3 gap-x-8 mt-20">
-              {slice.items.map((feature, featureIndex) => (
+              {slice.primary.cards.map((feature, featureIndex) => (
                 <Feature
                   key={asText(feature.feature_title)}
                   feature={{
