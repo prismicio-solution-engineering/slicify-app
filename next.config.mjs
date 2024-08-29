@@ -2,6 +2,11 @@
 
 const nextConfig = async () => {
   return {
+    experimental:{
+      outputFileTracingIncludes: {
+        '/slice-library': ['./slices/**/*']
+      }
+    },
     reactStrictMode: true,
     images: {
       loader: "imgix",
@@ -13,4 +18,4 @@ const nextConfig = async () => {
   };
 };
 
-module.exports = nextConfig;
+export default nextConfig;
