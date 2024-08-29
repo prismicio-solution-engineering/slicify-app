@@ -31,28 +31,51 @@
         },
         "anchor": {
           "type": "Text",
-          "config": { "label": "anchor", "placeholder": "optional" }
-        }
-      },
-      "items": {
-        "cta_label": {
-          "type": "Text",
-          "config": { "label": "Cta Label", "placeholder": "" }
-        },
-        "cta_link": {
-          "type": "Link",
-          "config": { "label": "Cta Link", "placeholder": "", "select": null }
-        },
-        "cta_type": {
-          "type": "Select",
           "config": {
-            "label": "Cta Type",
-            "placeholder": "",
-            "options": ["Primary", "Secondary", "Text"]
+            "label": "anchor",
+            "placeholder": "optional"
+          }
+        },
+        "buttons": {
+          "type": "Group",
+          "config": {
+            "label": "Buttons",
+            "repeat": true,
+            "fields": {
+              "cta_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Cta Label",
+                  "placeholder": ""
+                }
+              },
+              "cta_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Cta Link",
+                  "placeholder": "",
+                  "allowTargetBlank": false,
+                  "select": null
+                }
+              },
+              "cta_type": {
+                "type": "Select",
+                "config": {
+                  "label": "Cta Type",
+                  "placeholder": "",
+                  "options": [
+                    "Primary",
+                    "Secondary",
+                    "Text"
+                  ]
+                }
+              }
+            }
           }
         }
       },
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+      "items": {}
     },
     {
       "id": "titleOnly",
@@ -72,7 +95,10 @@
         },
         "anchor": {
           "type": "Text",
-          "config": { "label": "anchor", "placeholder": "optional" }
+          "config": {
+            "label": "anchor",
+            "placeholder": "optional"
+          }
         }
       },
       "items": {},
@@ -105,82 +131,51 @@
         },
         "anchor": {
           "type": "Text",
-          "config": { "label": "anchor", "placeholder": "optional" }
-        }
-      },
-      "items": {
-        "cta_label": {
-          "type": "Text",
-          "config": { "label": "Cta Label", "placeholder": "" }
-        },
-        "cta_link": {
-          "type": "Link",
-          "config": { "label": "Cta Link", "placeholder": "", "select": null }
-        },
-        "cta_type": {
-          "type": "Select",
           "config": {
-            "label": "Cta Type",
-            "placeholder": "",
-            "options": ["Primary", "Secondary", "Text"]
+            "label": "anchor",
+            "placeholder": "optional"
+          }
+        },
+        "buttons": {
+          "type": "Group",
+          "config": {
+            "label": "Buttons",
+            "repeat": true,
+            "fields": {
+              "cta_label": {
+                "type": "Text",
+                "config": {
+                  "label": "Cta Label",
+                  "placeholder": ""
+                }
+              },
+              "cta_link": {
+                "type": "Link",
+                "config": {
+                  "label": "Cta Link",
+                  "placeholder": "",
+                  "allowTargetBlank": false,
+                  "select": null
+                }
+              },
+              "cta_type": {
+                "type": "Select",
+                "config": {
+                  "label": "Cta Type",
+                  "placeholder": "",
+                  "options": [
+                    "Primary",
+                    "Secondary",
+                    "Text"
+                  ]
+                }
+              }
+            }
           }
         }
       },
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-    },
-    {
-      "id": "withVideoBackground",
-      "name": "With Video Background",
-      "docURL": "...",
-      "version": "sktwi1xtmkfgx8626",
-      "description": "Hero",
-      "primary": {
-        "title": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Title",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "heading1,strong"
-          }
-        },
-        "description": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Description",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph,strong,hyperlink"
-          }
-        },
-        "background_video": {
-          "type": "Embed",
-          "config": { "label": "Background Video", "placeholder": "" }
-        },
-        "anchor": {
-          "type": "Text",
-          "config": { "label": "anchor", "placeholder": "optional" }
-        }
-      },
-      "items": {
-        "cta_label": {
-          "type": "Text",
-          "config": { "label": "Cta Label", "placeholder": "" }
-        },
-        "cta_link": {
-          "type": "Link",
-          "config": { "label": "Cta Link", "placeholder": "", "select": null }
-        },
-        "cta_type": {
-          "type": "Select",
-          "config": {
-            "label": "Cta Type",
-            "placeholder": "",
-            "options": ["Primary", "Secondary", "Text"]
-          }
-        }
-      },
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+      "items": {}
     }
   ]
 }
