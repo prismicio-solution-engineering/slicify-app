@@ -29,32 +29,43 @@
             "multi": "paragraph,hyperlink,strong,em,preformatted,list-item,o-list-item,embed"
           }
         },
-        "anchor": {
-          "type": "Text",
-          "config": { "label": "anchor", "placeholder": "optional" }
-        }
-      },
-      "items": {
-        "question": {
-          "type": "StructuredText",
+        "faq": {
+          "type": "Group",
           "config": {
-            "label": "Question",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph"
+            "label": "FAQ",
+            "repeat": true,
+            "fields": {
+              "question": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Question",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "single": "paragraph"
+                }
+              },
+              "answer": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Answer",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,embed,hyperlink,strong,em"
+                }
+              }
+            }
           }
         },
-        "answer": {
-          "type": "StructuredText",
+        "anchor": {
+          "type": "Text",
           "config": {
-            "label": "Answer",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,embed,hyperlink,strong,em"
+            "label": "anchor",
+            "placeholder": "optional"
           }
         }
       },
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+      "items": {}
     },
     {
       "id": "threeColumns",
@@ -81,32 +92,43 @@
             "multi": "paragraph,hyperlink,strong,em,preformatted,list-item,o-list-item,embed"
           }
         },
-        "anchor": {
-          "type": "Text",
-          "config": { "label": "anchor", "placeholder": "optional" }
-        }
-      },
-      "items": {
-        "question": {
-          "type": "StructuredText",
+        "faq": {
+          "type": "Group",
           "config": {
-            "label": "Question",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph"
+            "label": "FAQ",
+            "repeat": true,
+            "fields": {
+              "question": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Question",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "single": "paragraph"
+                }
+              },
+              "answer": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Answer",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,embed,hyperlink,strong,em"
+                }
+              }
+            }
           }
         },
-        "answer": {
-          "type": "StructuredText",
+        "anchor": {
+          "type": "Text",
           "config": {
-            "label": "Answer",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,embed,hyperlink,strong,em"
+            "label": "anchor",
+            "placeholder": "optional"
           }
         }
       },
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+      "items": {}
     },
     {
       "id": "centered",
@@ -124,32 +146,43 @@
             "single": "heading2"
           }
         },
-        "anchor": {
-          "type": "Text",
-          "config": { "label": "anchor", "placeholder": "optional" }
-        }
-      },
-      "items": {
-        "question": {
-          "type": "StructuredText",
+        "faq": {
+          "type": "Group",
           "config": {
-            "label": "Question",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph"
+            "label": "FAQ",
+            "repeat": true,
+            "fields": {
+              "question": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Question",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "single": "paragraph"
+                }
+              },
+              "answer": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Answer",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,embed,hyperlink,strong,em"
+                }
+              }
+            }
           }
         },
-        "answer": {
-          "type": "StructuredText",
+        "anchor": {
+          "type": "Text",
           "config": {
-            "label": "Answer",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,embed,hyperlink,strong,em"
+            "label": "anchor",
+            "placeholder": "optional"
           }
         }
       },
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+      "items": {}
     },
     {
       "id": "centeredWithBackground",
@@ -167,32 +200,43 @@
             "single": "heading2"
           }
         },
-        "anchor": {
-          "type": "Text",
-          "config": { "label": "anchor", "placeholder": "optional" }
-        }
-      },
-      "items": {
-        "question": {
-          "type": "StructuredText",
+        "faq": {
+          "type": "Group",
           "config": {
-            "label": "Question",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph"
+            "label": "FAQ",
+            "repeat": true,
+            "fields": {
+              "question": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Question",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "single": "paragraph"
+                }
+              },
+              "answer": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Answer",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,embed,hyperlink,strong,em"
+                }
+              }
+            }
           }
         },
-        "answer": {
-          "type": "StructuredText",
+        "anchor": {
+          "type": "Text",
           "config": {
-            "label": "Answer",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,embed,hyperlink,strong,em"
+            "label": "anchor",
+            "placeholder": "optional"
           }
         }
       },
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+      "items": {}
     }
   ]
 }

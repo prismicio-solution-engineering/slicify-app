@@ -1,15 +1,11 @@
-'use client';
-
 import type { Content } from "@prismicio/client";
-
-// Tailwind imports
 import { Container } from "@/components/Container";
 import { PrismicRichText } from "@prismicio/react";
 import { Disclosure } from "@headlessui/react";
-import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/react/24/outline";
+import { MinusIcon, PlusIcon } from "@heroicons/react/24/outline";
 import backgroundImageBlue from "@/images/background-call-to-action.jpg";
 import Image from "next/image";
-import React from 'react';
+import React from "react";
 
 export default function FaqCentered({
   slice,
@@ -39,7 +35,7 @@ export default function FaqCentered({
                 }}
               />
               <dl className="mt-10 space-y-6 divide-y divide-gray-900/10">
-                {slice.items?.map((faq, idx) => (
+                {slice.primary.faq?.map((faq, idx) => (
                   <Disclosure as="div" key={idx} className="pt-6">
                     {({ open }) => (
                       <>
@@ -65,12 +61,12 @@ export default function FaqCentered({
                             </span>
                             <span className="ml-6 flex h-7 items-center">
                               {open ? (
-                                <MinusSmallIcon
+                                <MinusIcon
                                   className="h-6 w-6"
                                   aria-hidden="true"
                                 />
                               ) : (
-                                <PlusSmallIcon
+                                <PlusIcon
                                   className="h-6 w-6"
                                   aria-hidden="true"
                                 />
@@ -116,7 +112,6 @@ export default function FaqCentered({
           aria-labelledby="faq-title"
           className="relative overflow-hidden bg-white py-20 sm:py-32"
         >
-          {/* Condition to render image or not */}
           <Image
             className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
             src={backgroundImageBlue}
@@ -141,7 +136,7 @@ export default function FaqCentered({
                 }}
               />
               <dl className="mt-10 space-y-6 divide-y divide-white-900/10">
-                {slice.items?.map((faq, idx) => (
+                {slice.primary.faq?.map((faq, idx) => (
                   <Disclosure as="div" key={idx} className="pt-6">
                     {({ open }) => (
                       <>
@@ -167,12 +162,12 @@ export default function FaqCentered({
                             </span>
                             <span className="ml-6 flex h-7 items-center text-white">
                               {open ? (
-                                <MinusSmallIcon
+                                <MinusIcon
                                   className="h-6 w-6"
                                   aria-hidden="true"
                                 />
                               ) : (
-                                <PlusSmallIcon
+                                <PlusIcon
                                   className="h-6 w-6"
                                   aria-hidden="true"
                                 />

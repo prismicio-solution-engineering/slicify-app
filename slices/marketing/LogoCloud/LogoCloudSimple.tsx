@@ -1,7 +1,5 @@
 import type { Content } from "@prismicio/client";
 import { PrismicRichText } from "@prismicio/react";
-
-// Tailwind imports
 import { Container } from "@/components/Container";
 import { PrismicNextImage } from "@prismicio/next";
 
@@ -13,7 +11,10 @@ export default function LogoCloudSimple({
   darkMode: boolean;
 }) {
   return (
-    <section id={slice.primary.anchor || undefined} className={`pb-16 pt-20 lg:pt-32  ${darkMode && "bg-dark-blue"}`}>
+    <section
+      id={slice.primary.anchor || undefined}
+      className={`pb-16 pt-20 lg:pt-32  ${darkMode && "bg-dark-blue"}`}
+    >
       <Container className="text-center">
         <PrismicRichText
           field={slice.primary.title}
@@ -34,7 +35,7 @@ export default function LogoCloudSimple({
           className="mt-8 flex items-center justify-center gap-x-8 sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0"
         >
           <ul className="flex flex-col items-center gap-y-8 sm:flex-row sm:gap-x-12 sm:gap-y-0">
-            {slice.items.map((company, idx) => (
+            {slice.primary.logos.map((company, idx) => (
               <li key={idx} className="flex">
                 <PrismicNextImage
                   className="object-cover"

@@ -28,15 +28,24 @@
             "allowTargetBlank": true,
             "multi": "paragraph,preformatted,strong,em"
           }
-        }
-      },
-      "items": {
-        "article": {
-          "type": "Link",
+        },
+        "articles": {
+          "type": "Group",
           "config": {
-            "label": "Article",
-            "select": "document",
-            "customtypes": ["blog_article"]
+            "label": "Articles",
+            "repeat": true,
+            "fields": {
+              "article": {
+                "type": "Link",
+                "config": {
+                  "label": "Article",
+                  "select": "document",
+                  "customtypes": [
+                    "blog_article"
+                  ]
+                }
+              }
+            }
           }
         }
       },

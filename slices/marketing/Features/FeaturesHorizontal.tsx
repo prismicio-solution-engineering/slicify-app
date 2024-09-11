@@ -1,14 +1,11 @@
-"use client"
+"use client";
 
 import type { Content } from "@prismicio/client";
 import { PrismicRichText } from "@prismicio/react";
-
-//tailwindUI imports
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Tab } from "@headlessui/react";
 import clsx from "clsx";
-
 import { Container } from "@/components/Container";
 import backgroundImage from "@/images/background-features.jpg";
 import { asText } from "@prismicio/client";
@@ -89,7 +86,7 @@ export default function FeaturesHorizontal({
                 }`}
               >
                 <Tab.List className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
-                  {slice.items.map((feature, featureIndex) => (
+                  {slice.primary.features.map((feature, featureIndex) => (
                     <div
                       key={asText(feature.feature_title)}
                       className={clsx(
@@ -142,7 +139,7 @@ export default function FeaturesHorizontal({
                   rightSide === true ? "order-2" : "order-1 justify-self-end"
                 }`}
               >
-                {slice.items.map((feature) => (
+                {slice.primary.features.map((feature) => (
                   <Tab.Panel
                     key={asText(feature.feature_title)}
                     unmount={false}

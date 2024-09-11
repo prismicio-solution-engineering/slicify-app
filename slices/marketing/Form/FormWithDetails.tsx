@@ -1,4 +1,3 @@
-'use client';
 import { Button } from "@/components/Button";
 import type { Content } from "@prismicio/client";
 import Image from "next/image";
@@ -10,7 +9,10 @@ import { PrismicNextImage } from "@prismicio/next";
 
 export default function Form(slice: Content.FormSliceWithDetails) {
   return (
-    <div id={slice.primary.anchor || undefined} className="relative isolate overflow-hidden py-16 sm:py-24 lg:py-32">
+    <div
+      id={slice.primary.anchor || undefined}
+      className="relative isolate overflow-hidden py-16 sm:py-24 lg:py-32"
+    >
       <Image
         className="absolute left-1/2 top-1/2 max-w-none -translate-x-1/2 -translate-y-1/2 -z-10"
         src={backgroundImage}
@@ -67,18 +69,18 @@ export default function Form(slice: Content.FormSliceWithDetails) {
             </form>
           </div>
           <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">
-            {slice.items.map((feature, index) => (
+            {slice.primary.content.map((item, index) => (
               <div key={index} className="flex flex-col items-start">
                 <div className="rounded-md bg-white/5 p-2 ring-1 ring-white/10">
                   <PrismicNextImage
                     className="h-6 w-6 fill-none aria-hidden text-white"
-                    field={feature.icon}
+                    field={item.icon}
                     alt=""
                     sizes="52.75rem"
                   />
                 </div>
                 <PrismicRichText
-                  field={feature.title}
+                  field={item.title}
                   components={{
                     paragraph: ({ children }) => (
                       <dt className="mt-4 font-semibold text-white">
@@ -88,7 +90,7 @@ export default function Form(slice: Content.FormSliceWithDetails) {
                   }}
                 />
                 <PrismicRichText
-                  field={feature.description}
+                  field={item.description}
                   components={{
                     paragraph: ({ children }) => (
                       <dd className="mt-2 leading-7 text-gray-300">

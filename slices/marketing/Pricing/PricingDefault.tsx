@@ -1,6 +1,5 @@
 import type { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
-
 import { Container } from "@/components/Container";
 import Plan from "./Plan";
 
@@ -66,14 +65,14 @@ export default function PricingDefault({
         </div>
         <div
           className={`-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none ${
-            slice.items.length === 1
+            slice.primary.plans.length === 1
               ? "lg:justify-items-center"
-              : slice.items.length === 2
+              : slice.primary.plans.length === 2
               ? "lg:grid-cols-2 lg:auto-cols-fr lg:justify-items-center"
               : "lg:grid-cols-3"
           } xl:mx-0 xl:gap-x-8`}
         >
-          {slice.items.map((plan, index) => (
+          {slice.primary.plans.map((plan, index) => (
             <Plan
               key={"plan" + plan.name + index}
               name={plan.name}

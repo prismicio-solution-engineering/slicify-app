@@ -20,24 +20,35 @@
             "single": "paragraph"
           }
         },
+        "logos": {
+          "type": "Group",
+          "config": {
+            "label": "Logos",
+            "repeat": true,
+            "fields": {
+              "logo": {
+                "type": "Image",
+                "config": {
+                  "label": "Logo",
+                  "constraint": {
+                    "height": 48
+                  },
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        },
         "anchor": {
           "type": "Text",
-          "config": { "label": "anchor", "placeholder": "optional" }
-        }
-      },
-      "items": {
-        "logo": {
-          "type": "Image",
           "config": {
-            "label": "Logo",
-            "constraint": {
-              "height": 48
-            },
-            "thumbnails": []
+            "label": "anchor",
+            "placeholder": "optional"
           }
         }
       },
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+      "items": {}
     },
     {
       "id": "threeColumns",
@@ -55,24 +66,35 @@
             "single": "paragraph"
           }
         },
+        "logos": {
+          "type": "Group",
+          "config": {
+            "label": "Logos",
+            "repeat": true,
+            "fields": {
+              "logo": {
+                "type": "Image",
+                "config": {
+                  "label": "Logo",
+                  "constraint": {
+                    "height": 48
+                  },
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        },
         "anchor": {
           "type": "Text",
-          "config": { "label": "anchor", "placeholder": "optional" }
-        }
-      },
-      "items": {
-        "logo": {
-          "type": "Image",
           "config": {
-            "label": "Logo",
-            "constraint": {
-              "width": 200
-            },
-            "thumbnails": []
+            "label": "anchor",
+            "placeholder": "optional"
           }
         }
       },
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+      "items": {}
     },
     {
       "id": "single",
@@ -102,7 +124,10 @@
         },
         "anchor": {
           "type": "Text",
-          "config": { "label": "anchor", "placeholder": "optional" }
+          "config": {
+            "label": "anchor",
+            "placeholder": "optional"
+          }
         }
       },
       "items": {},
@@ -124,24 +149,35 @@
             "single": "paragraph"
           }
         },
+        "logos": {
+          "type": "Group",
+          "config": {
+            "label": "Logos",
+            "repeat": true,
+            "fields": {
+              "logo": {
+                "type": "Image",
+                "config": {
+                  "label": "Logo",
+                  "constraint": {
+                    "height": 48
+                  },
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        },
         "anchor": {
           "type": "Text",
-          "config": { "label": "anchor", "placeholder": "optional" }
-        }
-      },
-      "items": {
-        "logo": {
-          "type": "Image",
           "config": {
-            "label": "Logo",
-            "constraint": {
-              "width": 0
-            },
-            "thumbnails": []
+            "label": "anchor",
+            "placeholder": "optional"
           }
         }
       },
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+      "items": {}
     }
   ]
 }

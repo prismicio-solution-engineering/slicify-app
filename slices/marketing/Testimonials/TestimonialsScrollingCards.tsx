@@ -1,8 +1,6 @@
 import type { Content } from "@prismicio/client";
 import { PrismicRichText } from "@prismicio/react";
 import { QuoteIcon } from "@/components/QuoteIcon";
-
-// Tailwind imports
 import { Container } from "@/components/Container";
 import { PrismicNextImage } from "@prismicio/next";
 
@@ -12,7 +10,10 @@ export default function TestimonialsScrollingCards({
   slice: Content.TestimonialsSliceScrollingCards;
 }) {
   return (
-    <section id={slice.primary.anchor || undefined} className="bg-slate-50 py-20 sm:py-32">
+    <section
+      id={slice.primary.anchor || undefined}
+      className="bg-slate-50 py-20 sm:py-32"
+    >
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">
           <PrismicRichText
@@ -43,7 +44,7 @@ export default function TestimonialsScrollingCards({
               role="list"
               className="absolute md:min-w-screen-xl flex md:gap-x-8 flex-col md:flex-row gap-8"
             >
-              {slice?.items?.map((item, idx) => (
+              {slice?.primary.quotes?.map((item, idx) => (
                 <li
                   key={idx}
                   className="inline-flex md:w-96 sm:w-80 sm:space-x-4 flex-col"

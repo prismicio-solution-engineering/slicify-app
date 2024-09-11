@@ -1,6 +1,4 @@
 import type { Content } from "@prismicio/client";
-
-// Tailwind imports
 import { Container } from "@/components/Container";
 import { PrismicRichText } from "@prismicio/react";
 import Image from "next/image";
@@ -11,9 +9,6 @@ export default function FaqThreeColumns({
 }: {
   slice: Content.FaqSliceThreeColumns;
 }) {
-  {
-    /* Default Three Columns*/
-  }
   return (
     <section
       id={slice.primary.anchor || undefined}
@@ -66,7 +61,7 @@ export default function FaqThreeColumns({
           role="list"
           className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3"
         >
-          {slice.items?.map((faq, idx) => (
+          {slice.primary.faq?.map((faq, idx) => (
             <div key={idx}>
               <dt className="text-base font-semibold leading-7 text-dark-gray">
                 <PrismicRichText
