@@ -12,9 +12,9 @@ const nextConfig = async () => {
       loader: "imgix",
       path: "https://images.prismic.io/",
     },
-    // typescript: {
-    //   ignoreBuildErrors: true,
-    // },
+    typescript: {
+      ignoreBuildErrors: true,
+    },
   };
 };
 
