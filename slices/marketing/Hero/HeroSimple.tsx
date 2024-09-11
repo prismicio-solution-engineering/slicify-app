@@ -63,7 +63,7 @@ export default function HeroSimple({
                     <span className="ml-3">{item.cta_label}</span>
                   </Button>
                 ) : (
-                  <Button key={idx} field={item.cta_link} variant="outline">
+                  <Button key={idx} field={item.cta_link} variant="link">
                     <span>{item.cta_label}</span>
                   </Button>
                 );

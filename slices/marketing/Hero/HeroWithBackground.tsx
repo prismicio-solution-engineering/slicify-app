@@ -78,7 +78,7 @@ export default function HeroWithBackground({
                   <span className="ml-3 text-white">{item.cta_label}</span>
                 </Button>
               ) : (
-                <Button key={idx} field={item.cta_link} variant="outline">
+                <Button key={idx} field={item.cta_link} variant="link">
                   <span className="text-white">{item.cta_label}</span>
                 </Button>
               );

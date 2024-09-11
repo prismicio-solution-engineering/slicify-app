@@ -8,6 +8,7 @@ const baseStyles: clsxT.ClassDictionary = {
     "group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2",
   outline:
     "group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none",
+  link: "group inline-flex items-center justify-center py-2 px-4 text-sm font-semibold underline underline-offset-8 hover:underline-offset-4 transition-all duration-300 ease-in-out",
 };
 
 const variantStyles: clsxT.ClassDictionary = {
@@ -24,6 +25,10 @@ const variantStyles: clsxT.ClassDictionary = {
     white:
       "ring-slate-700 text-white hover:ring-slate-500 active:ring-slate-700 active:text-slate-400 focus-visible:outline-white",
   },
+  link: {
+    slate: "text-slate-700 hover:text-slate-900",
+    white: "text-white hover:text-slate-100 active:text-slate-300",
+  },
 };
 
 export function Button({
@@ -32,7 +37,9 @@ export function Button({
   className,
   href = "#",
   field,
+  document,
   submit,
+  button,
   ...props
 }: {
   variant?: string;
@@ -41,7 +48,9 @@ export function Button({
   children?: React.ReactNode;
   href?: string;
   field?: prismic.LinkField;
+  document?: prismic.PrismicDocument;
   submit?: boolean;
+  button?: boolean;
 }) {
   className = clsx(
     baseStyles[variant],
@@ -53,11 +62,17 @@ export function Button({
     return <button type="submit" className={className} {...props} />;
   }
 
-  return field ? (
-    // <Link href={href} className={className} {...props} />
-    <PrismicLink className={className} {...props} field={field} />
+  if (button) {
+    return <button type="button" className={className} {...props} />;
+  }
+
+  if (field) {
+    return <PrismicLink className={className} {...props} field={field} />;
+  }
+
+  return document ? (
+    <PrismicLink className={className} {...props} document={document} />
   ) : (
-    // <button className={className} {...props} />
     <PrismicLink className={className} {...props} href={href} />
   );
 }
