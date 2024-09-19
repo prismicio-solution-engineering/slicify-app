@@ -1,3 +1,5 @@
+"use client"
+
 import type { Content } from "@prismicio/client";
 import { PrismicRichText } from "@prismicio/react";
 import { Tab } from "@headlessui/react";

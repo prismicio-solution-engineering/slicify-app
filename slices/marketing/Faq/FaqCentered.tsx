@@ -1,3 +1,5 @@
+"use client"
+
 import type { Content } from "@prismicio/client";
 import { Container } from "@/components/Container";
 import { PrismicRichText } from "@prismicio/react";
