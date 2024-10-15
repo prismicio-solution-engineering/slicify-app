@@ -685,6 +685,7 @@ export type HeaderDocument<Lang extends string = string> =
   >;
 
 type HomePageDocumentDataSlicesSlice =
+  | TeamSlice
   | FeaturesSlice
   | PricingSlice
   | FormSlice
@@ -2647,10 +2648,11 @@ export interface HeroSliceDefaultPrimaryButtonsItem {
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
+   * - **Default Value**: Primary
    * - **API ID Path**: hero.default.primary.buttons[].cta_type
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  cta_type: prismic.SelectField<"Primary" | "Secondary" | "Text">;
+  cta_type: prismic.SelectField<"Primary" | "Secondary" | "Text", "filled">;
 }
 
 /**
@@ -2682,10 +2684,11 @@ export interface HeroSliceWithBackgroundPrimaryButtonsItem {
    *
    * - **Field Type**: Select
    * - **Placeholder**: *None*
+   * - **Default Value**: Primary
    * - **API ID Path**: hero.withBackground.primary.buttons[].cta_type
    * - **Documentation**: https://prismic.io/docs/field#select
    */
-  cta_type: prismic.SelectField<"Primary" | "Secondary" | "Text">;
+  cta_type: prismic.SelectField<"Primary" | "Secondary" | "Text", "filled">;
 }
 
 /**
@@ -3299,7 +3302,7 @@ export interface PricingSliceWithPromoPrimaryPlansItem {
   name: prismic.KeyTextField;
 
   /**
-   * Price field in *Pricing → With Promo → Primary → Plans*
+   * Price monthly field in *Pricing → With Promo → Primary → Plans*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -3334,6 +3337,71 @@ export interface PricingSliceWithPromoPrimaryPlansItem {
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: pricing.withPromo.primary.plans[].features
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  features: prismic.RichTextField;
+}
+
+/**
+ * Item in *Pricing → With Filter → Primary → Plans*
+ */
+export interface PricingSliceWithFilterPrimaryPlansItem {
+  /**
+   * Name field in *Pricing → With Filter → Primary → Plans*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing.withFilter.primary.plans[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Price monthly field in *Pricing → With Filter → Primary → Plans*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing.withFilter.primary.plans[].price
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  price: prismic.KeyTextField;
+
+  /**
+   * Price yearly field in *Pricing → With Filter → Primary → Plans*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing.withFilter.primary.plans[].price_yearly
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  price_yearly: prismic.KeyTextField;
+
+  /**
+   * Description field in *Pricing → With Filter → Primary → Plans*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing.withFilter.primary.plans[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Register Link field in *Pricing → With Filter → Primary → Plans*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing.withFilter.primary.plans[].register_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  register_link: prismic.LinkField;
+
+  /**
+   * Features field in *Pricing → With Filter → Primary → Plans*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing.withFilter.primary.plans[].features
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   features: prismic.RichTextField;
@@ -3496,9 +3564,130 @@ export type PricingSliceWithPromo = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Pricing → With Filter → Primary*
+ */
+export interface PricingSliceWithFilterPrimary {
+  /**
+   * Title field in *Pricing → With Filter → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: This is where it all begins...
+   * - **API ID Path**: pricing.withFilter.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * Description field in *Pricing → With Filter → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing.withFilter.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Monthly label field in *Pricing → With Filter → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing.withFilter.primary.monthly_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  monthly_label: prismic.KeyTextField;
+
+  /**
+   * Yearly label field in *Pricing → With Filter → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing.withFilter.primary.yearly_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  yearly_label: prismic.KeyTextField;
+
+  /**
+   * Plans field in *Pricing → With Filter → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing.withFilter.primary.plans[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  plans: prismic.GroupField<Simplify<PricingSliceWithFilterPrimaryPlansItem>>;
+
+  /**
+   * Promo Title field in *Pricing → With Filter → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing.withFilter.primary.promo_title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  promo_title: prismic.RichTextField;
+
+  /**
+   * Promo Description field in *Pricing → With Filter → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing.withFilter.primary.promo_description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  promo_description: prismic.RichTextField;
+
+  /**
+   * Promo Link Label field in *Pricing → With Filter → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing.withFilter.primary.promo_link_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  promo_link_label: prismic.KeyTextField;
+
+  /**
+   * Promo Link field in *Pricing → With Filter → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: pricing.withFilter.primary.promo_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  promo_link: prismic.LinkField;
+
+  /**
+   * anchor field in *Pricing → With Filter → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: optional
+   * - **API ID Path**: pricing.withFilter.primary.anchor
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  anchor: prismic.KeyTextField;
+}
+
+/**
+ * With Filter variation for Pricing Slice
+ *
+ * - **API ID**: `withFilter`
+ * - **Description**: Pricing
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PricingSliceWithFilter = prismic.SharedSliceVariation<
+  "withFilter",
+  Simplify<PricingSliceWithFilterPrimary>,
+  never
+>;
+
+/**
  * Slice variation for *Pricing*
  */
-type PricingSliceVariation = PricingSliceDefault | PricingSliceWithPromo;
+type PricingSliceVariation =
+  | PricingSliceDefault
+  | PricingSliceWithPromo
+  | PricingSliceWithFilter;
 
 /**
  * Pricing Shared Slice
@@ -3511,6 +3700,172 @@ export type PricingSlice = prismic.SharedSlice<
   "pricing",
   PricingSliceVariation
 >;
+
+/**
+ * Item in *Team → Default → Primary → Board members*
+ */
+export interface TeamSliceDefaultPrimaryBoardMembersItem {
+  /**
+   * Name field in *Team → Default → Primary → Board members*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.board_members[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Role field in *Team → Default → Primary → Board members*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.board_members[].role
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  role: prismic.KeyTextField;
+
+  /**
+   * Member Picture field in *Team → Default → Primary → Board members*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.board_members[].member_picture
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  member_picture: prismic.ImageField<never>;
+}
+
+/**
+ * Item in *Team → Default → Primary → Team members*
+ */
+export interface TeamSliceDefaultPrimaryTeamMembersItem {
+  /**
+   * Name field in *Team → Default → Primary → Team members*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.team_members[].name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Role field in *Team → Default → Primary → Team members*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.team_members[].role
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  role: prismic.KeyTextField;
+
+  /**
+   * Member Picture field in *Team → Default → Primary → Team members*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.team_members[].member_picture
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  member_picture: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *Team → Default → Primary*
+ */
+export interface TeamSliceDefaultPrimary {
+  /**
+   * Title field in *Team → Default → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.TitleField;
+
+  /**
+   * Description field in *Team → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * Board group label field in *Team → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.board_group_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  board_group_label: prismic.KeyTextField;
+
+  /**
+   * Board members field in *Team → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.board_members[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  board_members: prismic.GroupField<
+    Simplify<TeamSliceDefaultPrimaryBoardMembersItem>
+  >;
+
+  /**
+   * Team group label field in *Team → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.team_group_label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  team_group_label: prismic.KeyTextField;
+
+  /**
+   * Team members field in *Team → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: team.default.primary.team_members[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  team_members: prismic.GroupField<
+    Simplify<TeamSliceDefaultPrimaryTeamMembersItem>
+  >;
+}
+
+/**
+ * Default variation for Team Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TeamSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TeamSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Team*
+ */
+type TeamSliceVariation = TeamSliceDefault;
+
+/**
+ * Team Shared Slice
+ *
+ * - **API ID**: `team`
+ * - **Description**: Team
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TeamSlice = prismic.SharedSlice<"team", TeamSliceVariation>;
 
 /**
  * Item in *Testimonials → Default → Primary → Quotes*
@@ -4332,9 +4687,18 @@ declare module "@prismicio/client" {
       PricingSliceDefaultPrimary,
       PricingSliceWithPromoPrimaryPlansItem,
       PricingSliceWithPromoPrimary,
+      PricingSliceWithFilterPrimaryPlansItem,
+      PricingSliceWithFilterPrimary,
       PricingSliceVariation,
       PricingSliceDefault,
       PricingSliceWithPromo,
+      PricingSliceWithFilter,
+      TeamSlice,
+      TeamSliceDefaultPrimaryBoardMembersItem,
+      TeamSliceDefaultPrimaryTeamMembersItem,
+      TeamSliceDefaultPrimary,
+      TeamSliceVariation,
+      TeamSliceDefault,
       TestimonialsSlice,
       TestimonialsSliceDefaultPrimaryQuotesItem,
       TestimonialsSliceDefaultPrimary,

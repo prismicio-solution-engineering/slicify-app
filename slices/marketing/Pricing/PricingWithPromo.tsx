@@ -114,7 +114,7 @@ export default function PricingWithPromo({
                     field={slice.primary.promo_link}
                     className="rounded-md px-3.5 py-2 text-sm font-semibold leading-6 text-vibrant-blue ring-1 ring-inset ring-light-blue hover:ring-indigo-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-vibrant-blue"
                   >
-                    Buy discounted license{" "}
+                    {slice.primary.promo_link_label}
                     <span aria-hidden="true">&rarr;</span>
                   </PrismicLink>
                 </div>
