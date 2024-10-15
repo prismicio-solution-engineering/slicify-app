@@ -67,7 +67,8 @@
                     "Primary",
                     "Secondary",
                     "Text"
-                  ]
+                  ],
+                  "default_value": "Primary"
                 }
               }
             }
@@ -167,7 +168,8 @@
                     "Primary",
                     "Secondary",
                     "Text"
-                  ]
+                  ],
+                  "default_value": "Primary"
                 }
               }
             }

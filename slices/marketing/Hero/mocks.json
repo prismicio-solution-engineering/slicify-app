@@ -1,29 +1,6 @@
 [
 	{
 		"__TYPE__": "SharedSliceContent",
-		"variation": "titleOnly",
-		"primary": {
-			"title": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading1",
-						"content": {
-							"text": "Beside"
-						}
-					}
-				]
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
 			"title": {
@@ -80,8 +57,8 @@
 								"cta_type",
 								{
 									"__TYPE__": "FieldContent",
-									"type": "Select",
-									"value": "Primary"
+									"value": "Primary",
+									"type": "Select"
 								}
 							]
 						]
@@ -101,8 +78,8 @@
 								"cta_type",
 								{
 									"__TYPE__": "FieldContent",
-									"type": "Select",
-									"value": "Text"
+									"value": "Primary",
+									"type": "Select"
 								}
 							]
 						]
@@ -141,6 +118,29 @@
 						}
 					]
 				]
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "titleOnly",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Beside"
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
 			}
 		]
 	},
@@ -197,8 +197,8 @@
 								"cta_type",
 								{
 									"__TYPE__": "FieldContent",
-									"type": "Select",
-									"value": "Primary"
+									"value": "Primary",
+									"type": "Select"
 								}
 							]
 						]
@@ -218,8 +218,8 @@
 								"cta_type",
 								{
 									"__TYPE__": "FieldContent",
-									"type": "Select",
-									"value": "Text"
+									"value": "Text",
+									"type": "Select"
 								}
 							]
 						]
