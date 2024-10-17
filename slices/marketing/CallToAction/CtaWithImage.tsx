@@ -58,7 +58,7 @@ export default function CtaWithImage({
             }}
           />
           <div className="mt-10 lg:flex justify-start gap-x-6">
-            {slice.primary.buttons.map((item, idx) => {
+            {slice.primary.buttons?.map((item, idx) => {
               return item.cta_type === "Primary" ? (
                 <Button key={idx} field={item.cta_link} color="white">
                   {item.cta_label}

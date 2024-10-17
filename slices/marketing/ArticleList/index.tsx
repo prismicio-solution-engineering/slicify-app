@@ -24,7 +24,7 @@ async function HorizontalThreeColumn({
 }) {
   const client = createClient();
 
-  const articlesUids: string[] = slice.primary.articles.map((item) => {
+  const articlesUids: string[] = slice.primary.articles?.map((item) => {
     if (isFilled.contentRelationship(item.article)) {
       return item.article.uid!;
     }
