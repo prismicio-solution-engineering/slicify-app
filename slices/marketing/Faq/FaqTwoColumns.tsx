@@ -1,6 +1,5 @@
 import type { Content } from "@prismicio/client";
 import { PrismicRichText } from "@prismicio/react";
-
 export default function FaqTwoColumns({
   slice,
 }: {
@@ -39,7 +38,7 @@ export default function FaqTwoColumns({
         />
         <div className="mt-20">
           <dl className="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:gap-x-10">
-            {slice.items?.map((faq, idx) => (
+            {slice.primary.faq?.map((faq, idx) => (
               <div key={idx}>
                 <dt className="text-base font-semibold leading-7 text-white">
                   <PrismicRichText

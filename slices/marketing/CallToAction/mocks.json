@@ -139,39 +139,48 @@
 				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"buttons": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"cta_label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "company",
+									"type": "Text"
+								}
+							],
+							[
+								"cta_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://prismic.io"
+									}
+								}
+							],
+							[
+								"cta_type",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "Text"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		"items": [
 			{
 				"__TYPE__": "GroupItemContent",
-				"value": [
-					[
-						"cta_label",
-						{
-							"__TYPE__": "FieldContent",
-							"value": "coal",
-							"type": "Text"
-						}
-					],
-					[
-						"cta_link",
-						{
-							"__TYPE__": "LinkContent",
-							"value": {
-								"__TYPE__": "ExternalLink",
-								"url": "http://twitter.com"
-							}
-						}
-					],
-					[
-						"cta_type",
-						{
-							"__TYPE__": "FieldContent",
-							"value": "Primary",
-							"type": "Select"
-						}
-					]
-				]
+				"value": []
 			}
 		]
 	},
@@ -223,39 +232,81 @@
 				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"buttons": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"cta_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com",
+										"target": ""
+									}
+								}
+							],
+							[
+								"cta_label",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Click here"
+								}
+							],
+							[
+								"cta_type",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "Primary"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"cta_label",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Learn more"
+								}
+							],
+							[
+								"cta_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com",
+										"target": ""
+									}
+								}
+							],
+							[
+								"cta_type",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "Text"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		"items": [
 			{
 				"__TYPE__": "GroupItemContent",
-				"value": [
-					[
-						"cta_label",
-						{
-							"__TYPE__": "FieldContent",
-							"value": "arrive",
-							"type": "Text"
-						}
-					],
-					[
-						"cta_link",
-						{
-							"__TYPE__": "LinkContent",
-							"value": {
-								"__TYPE__": "ExternalLink",
-								"url": "http://twitter.com"
-							}
-						}
-					],
-					[
-						"cta_type",
-						{
-							"__TYPE__": "FieldContent",
-							"value": "Primary",
-							"type": "Select"
-						}
-					]
-				]
+				"value": []
 			}
 		]
 	}

@@ -1,3 +1,5 @@
+"use client"
+
 import { FormEvent } from "react";
 
 // Handles the submit event on form submit.

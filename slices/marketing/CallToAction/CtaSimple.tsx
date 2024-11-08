@@ -1,7 +1,6 @@
 import type { Content } from "@prismicio/client";
 import Image from "next/image";
 
-// Tailwind imports
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import backgroundImage from "@/images/background-call-to-action.jpg";
@@ -52,12 +51,12 @@ export default function CtaSimple({
                 return (
                   <>
                     {!withBackground ? (
-                        <span className="relative whitespace-nowrap text-blue-600">
-                          <UnderlineDoodle className="absolute left-0 top-2/3 h-[0.58em] w-full fill-blue-300/70" />
-                          <span className="relative">{children}</span>
-                        </span>
-                      ) : (
-                        <strong className="relative">{children}</strong>
+                      <span className="relative whitespace-nowrap text-blue-600">
+                        <UnderlineDoodle className="absolute left-0 top-2/3 h-[0.58em] w-full fill-blue-300/70" />
+                        <span className="relative">{children}</span>
+                      </span>
+                    ) : (
+                      <strong className="relative">{children}</strong>
                     )}
                   </>
                 );

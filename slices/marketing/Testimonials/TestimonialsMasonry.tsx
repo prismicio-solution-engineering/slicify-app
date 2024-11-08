@@ -1,9 +1,5 @@
 import type { Content } from "@prismicio/client";
-import {
-  PrismicRichText,
-} from "@prismicio/react";
-
-// Tailwind imports
+import { PrismicRichText } from "@prismicio/react";
 import { Container } from "@/components/Container";
 import { QuoteIcon } from "@/components/QuoteIcon";
 import { PrismicNextImage } from "@prismicio/next";
@@ -43,7 +39,7 @@ export default function TestimonialsMasonry({
           />
         </div>
         <ul className="mx-auto mt-16 max-w-2xl w-full lg:columns-3 sm:columns-2 md:gap-6 sm:gap-8 lg:mt-20 lg:max-w-6xl xl:max-w-7xl">
-          {slice?.items?.map((item, idx) => (
+          {slice?.primary.quotes?.map((item, idx) => (
             <li
               key={idx}
               className="mb-8 xl:w-96 sm:w-80 xs:w-72 sm:space-x-4 break-inside-avoid"

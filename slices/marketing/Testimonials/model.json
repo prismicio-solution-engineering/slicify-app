@@ -29,48 +29,58 @@
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
+        "quotes": {
+          "type": "Group",
+          "config": {
+            "label": "Quotes",
+            "repeat": true,
+            "fields": {
+              "quote": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Quote",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "single": "paragraph"
+                }
+              },
+              "author": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Author",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "single": "paragraph"
+                }
+              },
+              "author_role": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Author role",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "single": "paragraph"
+                }
+              },
+              "author_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Author image",
+                  "constraint": {
+                    "width": 56,
+                    "height": 56
+                  },
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        },
         "anchor": {
           "type": "Text",
-          "config": { "label": "anchor", "placeholder": "optional" }
-        }
-      },
-      "items": {
-        "quote": {
-          "type": "StructuredText",
           "config": {
-            "label": "Quote",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph"
-          }
-        },
-        "author": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Author",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph"
-          }
-        },
-        "author_role": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Author role",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph"
-          }
-        },
-        "author_image": {
-          "type": "Image",
-          "config": {
-            "label": "Author image",
-            "constraint": {
-              "width": 56,
-              "height": 56
-            },
-            "thumbnails": []
+            "label": "anchor",
+            "placeholder": "optional"
           }
         }
       },
@@ -101,48 +111,58 @@
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
+        "quotes": {
+          "type": "Group",
+          "config": {
+            "label": "Quotes",
+            "repeat": true,
+            "fields": {
+              "quote": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Quote",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "single": "paragraph"
+                }
+              },
+              "author": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Author",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "single": "paragraph"
+                }
+              },
+              "author_role": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Author role",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "single": "paragraph"
+                }
+              },
+              "author_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Author image",
+                  "constraint": {
+                    "width": 56,
+                    "height": 56
+                  },
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        },
         "anchor": {
           "type": "Text",
-          "config": { "label": "anchor", "placeholder": "optional" }
-        }
-      },
-      "items": {
-        "quote": {
-          "type": "StructuredText",
           "config": {
-            "label": "Quote",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph"
-          }
-        },
-        "author": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Author",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph"
-          }
-        },
-        "author_role": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Author role",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph"
-          }
-        },
-        "author_image": {
-          "type": "Image",
-          "config": {
-            "label": "Author image",
-            "constraint": {
-              "width": 56,
-              "height": 56
-            },
-            "thumbnails": []
+            "label": "anchor",
+            "placeholder": "optional"
           }
         }
       },
@@ -253,7 +273,10 @@
         },
         "anchor": {
           "type": "Text",
-          "config": { "label": "anchor", "placeholder": "optional" }
+          "config": {
+            "label": "anchor",
+            "placeholder": "optional"
+          }
         }
       },
       "items": {},
@@ -316,7 +339,10 @@
         },
         "anchor": {
           "type": "Text",
-          "config": { "label": "anchor", "placeholder": "optional" }
+          "config": {
+            "label": "anchor",
+            "placeholder": "optional"
+          }
         }
       },
       "items": {},
@@ -369,7 +395,10 @@
         },
         "anchor": {
           "type": "Text",
-          "config": { "label": "anchor", "placeholder": "optional" }
+          "config": {
+            "label": "anchor",
+            "placeholder": "optional"
+          }
         }
       },
       "items": {},

@@ -14,7 +14,5 @@ export default function Hero({ slice }: HeroProps) {
       return <HeroSimple slice={slice} withoutCta={true} />;
     case "withBackground":
       return <HeroWithBackground slice={slice} video={false} />;
-    case "withVideoBackground":
-      return <HeroWithBackground slice={slice} video={true} />;
   }
 }

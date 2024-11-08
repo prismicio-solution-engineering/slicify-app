@@ -51,7 +51,9 @@ export default function Plan({
     <section
       className={clsx(
         "flex flex-col rounded-3xl px-6 sm:px-8 lg:max-w-md",
-        featured ? "order-first bg-blue-600 py-8 lg:order-none" : "lg:py-8",
+        featured
+          ? "order-first bg-blue-600 py-8 lg:order-none"
+          : "lg:py-8 border-2 border-light-blue-70",
         lightTheme && "bg-white drop-shadow py-8"
       )}
     >
@@ -135,7 +137,7 @@ export default function Plan({
             listItem: ({ text }) => (
               <li key={text} className="flex">
                 <CheckIcon
-                  className={featured ? "text-white" : "text-slate-400"}
+                  className={featured ? "text-white" : "text-light-blue-70"}
                 />
                 <span className="ml-4">{text}</span>
               </li>
@@ -143,15 +145,6 @@ export default function Plan({
           }}
         />
       </div>
-      {/* <Button
-        field={link}
-        variant={featured || lightTheme ? "solid" : "outline"}
-        color={lightTheme ? "blue" : "white"}
-        className="mt-8"
-        aria-label={`Get started with the ${name} plan for ${price}`}
-      >
-        Get started
-      </Button> */}
     </section>
   );
 }
