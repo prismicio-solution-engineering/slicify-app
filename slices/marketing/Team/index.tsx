@@ -155,7 +155,7 @@ const Team = ({ slice }: TeamProps): JSX.Element => {
                 className="grid grid-cols-1 gap-x-8 gap-y-10 ui-not-focus-visible:outline-none sm:grid-cols-2 sm:gap-y-16 md:grid-cols-3"
                 unmount={false}
               >
-                {slice.primary.board_members.map((member, idx) => (
+                {slice.primary.board_members?.map((member, idx) => (
                   <div key={idx}>
                     <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
                       <div
@@ -192,7 +192,7 @@ const Team = ({ slice }: TeamProps): JSX.Element => {
                 className="grid grid-cols-1 gap-x-8 gap-y-10 ui-not-focus-visible:outline-none sm:grid-cols-2 sm:gap-y-16 md:grid-cols-3"
                 unmount={false}
               >
-                {slice.primary.team_members.map((member, idx) => (
+                {slice.primary.team_members?.map((member, idx) => (
                   <div key={idx}>
                     <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
                       <div

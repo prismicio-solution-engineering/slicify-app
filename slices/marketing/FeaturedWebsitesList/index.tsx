@@ -37,7 +37,7 @@ const FeaturedWebsitesList = async ({ slice }: FeaturedWebsitesListProps) => {
 
   const websiteList: Website[] =
     slice.variation == "autoList"
-      ? showcaseWebsites.map((website) => ({
+      ? showcaseWebsites?.map((website) => ({
           name: asText(website.data.name),
           screenshot: {
             url: website.data.screenshot.url!,
@@ -56,7 +56,7 @@ const FeaturedWebsitesList = async ({ slice }: FeaturedWebsitesListProps) => {
           technology: website.data.website_technology.uid,
           industry: website.data.industry.uid,
         }))
-      : slice.primary.websites.map(
+      : slice.primary.websites?.map(
           (website) =>
             (({
               ...website.website,

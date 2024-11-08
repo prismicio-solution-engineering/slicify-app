@@ -84,7 +84,7 @@ export async function generateStaticParams() {
     if (parts.length === 3) {
       return {
         lang: parts[0] || '',
-        articleSlug: [parts[2]] || ''
+        articleSlug: parts[2] ? [parts[2]] : ''
       };
     }
     if (parts.length === 4) {

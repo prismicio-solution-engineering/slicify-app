@@ -105,14 +105,14 @@ export default function PricingWithFilters({
                 <div
                   className={clsx(
                     "mx-auto grid max-w-md grid-cols-1 gap-8",
-                    slice.primary.plans.length === 1
+                    slice.primary.plans?.length === 1
                       ? "lg:max-w-4xl lg:grid-cols-1 lg:justify-items-center"
-                      : slice.primary.plans.length === 3
+                      : slice.primary.plans?.length === 3
                       ? "lg:max-w-5xl lg:grid-cols-3"
                       : "lg:max-w-4xl lg:grid-cols-2"
                   )}
                 >
-                  {slice.primary.plans.map((plan, index) => (
+                  {slice.primary.plans?.map((plan, index) => (
                     <Plan
                       key={"plan" + plan.name + index}
                       name={plan.name}
@@ -126,7 +126,7 @@ export default function PricingWithFilters({
                   <div
                     className={clsx(
                       "flex flex-col items-start gap-x-8 gap-y-6 rounded-3xl p-8 bg-white ring-1 ring-gray-900/10 sm:gap-y-10 sm:p-10 lg:flex-row lg:items-center",
-                      slice.primary.plans.length === 3
+                      slice.primary.plans?.length === 3
                         ? "lg:col-span-3"
                         : "lg:col-span-2 "
                     )}

@@ -13,7 +13,7 @@ const nextConfig = async () => {
       path: "https://images.prismic.io/",
     },
     typescript: {
-      ignoreBuildErrors: true,
+      //ignoreBuildErrors: true,
     },
   };
 };
