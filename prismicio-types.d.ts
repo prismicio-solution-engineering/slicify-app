@@ -2656,45 +2656,20 @@ export interface HeroSliceDefaultPrimaryButtonsItem {
 }
 
 /**
- * Item in *Hero → With Background → Primary → Buttons*
- */
-export interface HeroSliceWithBackgroundPrimaryButtonsItem {
-  /**
-   * Cta Label field in *Hero → With Background → Primary → Buttons*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.withBackground.primary.buttons[].cta_label
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  cta_label: prismic.KeyTextField;
-
-  /**
-   * Cta Link field in *Hero → With Background → Primary → Buttons*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.withBackground.primary.buttons[].cta_link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  cta_link: prismic.LinkField;
-
-  /**
-   * Cta Type field in *Hero → With Background → Primary → Buttons*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: Primary
-   * - **API ID Path**: hero.withBackground.primary.buttons[].cta_type
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  cta_type: prismic.SelectField<"Primary" | "Secondary" | "Text", "filled">;
-}
-
-/**
  * Primary content in *Hero → Default → Primary*
  */
 export interface HeroSliceDefaultPrimary {
+  /**
+   * Theme field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: hero.default.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
   /**
    * Title field in *Hero → Default → Primary*
    *
@@ -2754,6 +2729,17 @@ export type HeroSliceDefault = prismic.SharedSliceVariation<
  */
 export interface HeroSliceTitleOnlyPrimary {
   /**
+   * Theme field in *Hero → Title Only → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: hero.titleOnly.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
+  /**
    * Title field in *Hero → Title Only → Primary*
    *
    * - **Field Type**: Rich Text
@@ -2788,72 +2774,9 @@ export type HeroSliceTitleOnly = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *Hero → With Background → Primary*
- */
-export interface HeroSliceWithBackgroundPrimary {
-  /**
-   * Title field in *Hero → With Background → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.withBackground.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.RichTextField;
-
-  /**
-   * Description field in *Hero → With Background → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.withBackground.primary.description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * anchor field in *Hero → With Background → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: optional
-   * - **API ID Path**: hero.withBackground.primary.anchor
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  anchor: prismic.KeyTextField;
-
-  /**
-   * Buttons field in *Hero → With Background → Primary*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: hero.withBackground.primary.buttons[]
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  buttons: prismic.GroupField<
-    Simplify<HeroSliceWithBackgroundPrimaryButtonsItem>
-  >;
-}
-
-/**
- * With Background variation for Hero Slice
- *
- * - **API ID**: `withBackground`
- * - **Description**: Hero
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type HeroSliceWithBackground = prismic.SharedSliceVariation<
-  "withBackground",
-  Simplify<HeroSliceWithBackgroundPrimary>,
-  never
->;
-
-/**
  * Slice variation for *Hero*
  */
-type HeroSliceVariation =
-  | HeroSliceDefault
-  | HeroSliceTitleOnly
-  | HeroSliceWithBackground;
+type HeroSliceVariation = HeroSliceDefault | HeroSliceTitleOnly;
 
 /**
  * Hero Shared Slice
@@ -4559,6 +4482,17 @@ declare module "@prismicio/client" {
     ): prismic.Client<AllDocumentTypes>;
   }
 
+  interface CreateWriteClient {
+    (
+      repositoryNameOrEndpoint: string,
+      options: prismic.WriteClientConfig,
+    ): prismic.WriteClient<AllDocumentTypes>;
+  }
+
+  interface CreateMigration {
+    (): prismic.Migration<AllDocumentTypes>;
+  }
+
   namespace Content {
     export type {
       AuthorDocument,
@@ -4659,12 +4593,9 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimaryButtonsItem,
       HeroSliceDefaultPrimary,
       HeroSliceTitleOnlyPrimary,
-      HeroSliceWithBackgroundPrimaryButtonsItem,
-      HeroSliceWithBackgroundPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
       HeroSliceTitleOnly,
-      HeroSliceWithBackground,
       JobListSlice,
       JobListSliceDefaultPrimary,
       JobListSliceVariation,
