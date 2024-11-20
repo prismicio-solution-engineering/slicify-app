@@ -11,6 +11,20 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Testimonials",
       "primary": {
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "Blue",
+              "Dark",
+              "Light",
+              "White"
+            ],
+            "default_value": "Blue"
+          }
+        },
         "title": {
           "type": "StructuredText",
           "config": {
@@ -93,6 +107,20 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Testimonials",
       "primary": {
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "Blue",
+              "Dark",
+              "Light",
+              "White"
+            ],
+            "default_value": "Blue"
+          }
+        },
         "title": {
           "type": "StructuredText",
           "config": {
@@ -175,6 +203,20 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Testimonials",
       "primary": {
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "Blue",
+              "Dark",
+              "Light",
+              "White"
+            ],
+            "default_value": "Blue"
+          }
+        },
         "company_logo_column_1": {
           "type": "Image",
           "config": {
@@ -289,6 +331,20 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Testimonials",
       "primary": {
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "Blue",
+              "Dark",
+              "Light",
+              "White"
+            ],
+            "default_value": "Blue"
+          }
+        },
         "company_logo": {
           "type": "Image",
           "config": {
@@ -355,6 +411,20 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Testimonials",
       "primary": {
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "Blue",
+              "Dark",
+              "Light",
+              "White"
+            ],
+            "default_value": "Blue"
+          }
+        },
         "quote": {
           "type": "StructuredText",
           "config": {

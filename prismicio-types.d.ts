@@ -1130,6 +1130,17 @@ export interface CallToActionSliceWithImageLeftPrimaryButtonsItem {
  */
 export interface CallToActionSliceDefaultPrimary {
   /**
+   * Theme field in *CallToAction → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: call_to_action.default.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
+  /**
    * Title field in *CallToAction → Default → Primary*
    *
    * - **Field Type**: Title
@@ -1198,6 +1209,17 @@ export type CallToActionSliceDefault = prismic.SharedSliceVariation<
  */
 export interface CallToActionSliceWhiteBackgroundPrimary {
   /**
+   * Theme field in *CallToAction → White Background → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: call_to_action.whiteBackground.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
+  /**
    * Title field in *CallToAction → White Background → Primary*
    *
    * - **Field Type**: Rich Text
@@ -1265,6 +1287,17 @@ export type CallToActionSliceWhiteBackground = prismic.SharedSliceVariation<
  * Primary content in *CallToAction → With Image Right → Primary*
  */
 export interface CallToActionSliceWithImageRightPrimary {
+  /**
+   * Theme field in *CallToAction → With Image Right → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: call_to_action.withImageRight.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
   /**
    * Title field in *CallToAction → With Image Right → Primary*
    *
@@ -1335,6 +1368,17 @@ export type CallToActionSliceWithImageRight = prismic.SharedSliceVariation<
  * Primary content in *CallToAction → With Image Left → Primary*
  */
 export interface CallToActionSliceWithImageLeftPrimary {
+  /**
+   * Theme field in *CallToAction → With Image Left → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: call_to_action.withImageLeft.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
   /**
    * Title field in *CallToAction → With Image Left → Primary*
    *
@@ -1527,6 +1571,17 @@ export interface FaqSliceCenteredWithBackgroundPrimaryFaqItem {
  */
 export interface FaqSliceTwoColumnsPrimary {
   /**
+   * Theme field in *Faq → Two Columns → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: faq.twoColumns.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
+  /**
    * Title field in *Faq → Two Columns → Primary*
    *
    * - **Field Type**: Title
@@ -1584,6 +1639,17 @@ export type FaqSliceTwoColumns = prismic.SharedSliceVariation<
  * Primary content in *Faq → Three Columns → Primary*
  */
 export interface FaqSliceThreeColumnsPrimary {
+  /**
+   * Theme field in *Faq → Three Columns → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: faq.threeColumns.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
   /**
    * Title field in *Faq → Three Columns → Primary*
    *
@@ -1643,6 +1709,17 @@ export type FaqSliceThreeColumns = prismic.SharedSliceVariation<
  */
 export interface FaqSliceCenteredPrimary {
   /**
+   * Theme field in *Faq → Centered → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: faq.centered.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
+  /**
    * Title field in *Faq → Centered → Primary*
    *
    * - **Field Type**: Title
@@ -1690,6 +1767,17 @@ export type FaqSliceCentered = prismic.SharedSliceVariation<
  * Primary content in *Faq → Centered With Background → Primary*
  */
 export interface FaqSliceCenteredWithBackgroundPrimary {
+  /**
+   * Theme field in *Faq → Centered With Background → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: faq.centeredWithBackground.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
   /**
    * Title field in *Faq → Centered With Background → Primary*
    *
@@ -1774,6 +1862,17 @@ export interface FeaturedWebsitesListSliceDefaultPrimaryWebsitesItem {
  */
 export interface FeaturedWebsitesListSliceDefaultPrimary {
   /**
+   * Theme field in *FeaturedWebsitesList → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: featured_websites_list.default.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
+  /**
    * Title field in *FeaturedWebsitesList → Default → Primary*
    *
    * - **Field Type**: Rich Text
@@ -1833,6 +1932,17 @@ export type FeaturedWebsitesListSliceDefault = prismic.SharedSliceVariation<
  * Primary content in *FeaturedWebsitesList → Auto List → Primary*
  */
 export interface FeaturedWebsitesListSliceAutoListPrimary {
+  /**
+   * Theme field in *FeaturedWebsitesList → Auto List → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: featured_websites_list.autoList.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
   /**
    * Title field in *FeaturedWebsitesList → Auto List → Primary*
    *
@@ -2081,6 +2191,17 @@ export interface FeaturesSliceBelowPrimaryFeaturesItem {
  */
 export interface FeaturesSliceRightSidePrimary {
   /**
+   * Theme field in *Features → Right Side → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: features.rightSide.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
+  /**
    * Title field in *Features → Right Side → Primary*
    *
    * - **Field Type**: Rich Text
@@ -2140,6 +2261,17 @@ export type FeaturesSliceRightSide = prismic.SharedSliceVariation<
  * Primary content in *Features → Left Side → Primary*
  */
 export interface FeaturesSliceLeftSidePrimary {
+  /**
+   * Theme field in *Features → Left Side → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: features.leftSide.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
   /**
    * Title field in *Features → Left Side → Primary*
    *
@@ -2201,6 +2333,17 @@ export type FeaturesSliceLeftSide = prismic.SharedSliceVariation<
  */
 export interface FeaturesSliceAbovePrimary {
   /**
+   * Theme field in *Features → Above → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: features.above.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
+  /**
    * Title field in *Features → Above → Primary*
    *
    * - **Field Type**: Rich Text
@@ -2258,6 +2401,17 @@ export type FeaturesSliceAbove = prismic.SharedSliceVariation<
  * Primary content in *Features → Below → Primary*
  */
 export interface FeaturesSliceBelowPrimary {
+  /**
+   * Theme field in *Features → Below → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: features.below.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
   /**
    * Title field in *Features → Below → Primary*
    *
@@ -2373,6 +2527,17 @@ export interface FormSliceWithDetailsPrimaryContentItem {
  */
 export interface FormSliceSimplePrimary {
   /**
+   * Theme field in *Form → Simple → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: form.simple.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
+  /**
    * Description field in *Form → Simple → Primary*
    *
    * - **Field Type**: Rich Text
@@ -2440,6 +2605,17 @@ export type FormSliceSimple = prismic.SharedSliceVariation<
  * Primary content in *Form → With Details → Primary*
  */
 export interface FormSliceWithDetailsPrimary {
+  /**
+   * Theme field in *Form → With Details → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: form.withDetails.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
   /**
    * Title field in *Form → With Details → Primary*
    *
@@ -2528,6 +2704,17 @@ export type FormSliceWithDetails = prismic.SharedSliceVariation<
  * Primary content in *Form → Centered → Primary*
  */
 export interface FormSliceCenteredPrimary {
+  /**
+   * Theme field in *Form → Centered → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: form.centered.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
   /**
    * Title field in *Form → Centered → Primary*
    *
@@ -2792,6 +2979,17 @@ export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
  */
 export interface JobListSliceDefaultPrimary {
   /**
+   * Theme field in *JobList → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: job_list.default.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
+  /**
    * Title field in *JobList → Default → Primary*
    *
    * - **Field Type**: Title
@@ -2932,6 +3130,17 @@ export interface LogoCloudSliceSimpleDarkModePrimaryLogosItem {
  */
 export interface LogoCloudSliceDefaultPrimary {
   /**
+   * Theme field in *LogoCloud → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: logo_cloud.default.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
+  /**
    * Title field in *LogoCloud → Default → Primary*
    *
    * - **Field Type**: Rich Text
@@ -2979,6 +3188,17 @@ export type LogoCloudSliceDefault = prismic.SharedSliceVariation<
  * Primary content in *LogoCloud → Three Columns → Primary*
  */
 export interface LogoCloudSliceThreeColumnsPrimary {
+  /**
+   * Theme field in *LogoCloud → Three Columns → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: logo_cloud.threeColumns.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
   /**
    * Title field in *LogoCloud → Three Columns → Primary*
    *
@@ -3030,6 +3250,17 @@ export type LogoCloudSliceThreeColumns = prismic.SharedSliceVariation<
  */
 export interface LogoCloudSliceSinglePrimary {
   /**
+   * Theme field in *LogoCloud → Single → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: logo_cloud.single.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
+  /**
    * Title field in *LogoCloud → Single → Primary*
    *
    * - **Field Type**: Rich Text
@@ -3077,6 +3308,17 @@ export type LogoCloudSliceSingle = prismic.SharedSliceVariation<
  * Primary content in *LogoCloud → Simple Dark Mode → Primary*
  */
 export interface LogoCloudSliceSimpleDarkModePrimary {
+  /**
+   * Theme field in *LogoCloud → Simple Dark Mode → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: logo_cloud.simpleDarkMode.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
   /**
    * Title field in *LogoCloud → Simple Dark Mode → Primary*
    *
@@ -3335,6 +3577,17 @@ export interface PricingSliceWithFilterPrimaryPlansItem {
  */
 export interface PricingSliceDefaultPrimary {
   /**
+   * Theme field in *Pricing → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: pricing.default.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
+  /**
    * Title field in *Pricing → Default → Primary*
    *
    * - **Field Type**: Rich Text
@@ -3392,6 +3645,17 @@ export type PricingSliceDefault = prismic.SharedSliceVariation<
  * Primary content in *Pricing → With Promo → Primary*
  */
 export interface PricingSliceWithPromoPrimary {
+  /**
+   * Theme field in *Pricing → With Promo → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: pricing.withPromo.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
   /**
    * Title field in *Pricing → With Promo → Primary*
    *
@@ -3490,6 +3754,17 @@ export type PricingSliceWithPromo = prismic.SharedSliceVariation<
  * Primary content in *Pricing → With Filter → Primary*
  */
 export interface PricingSliceWithFilterPrimary {
+  /**
+   * Theme field in *Pricing → With Filter → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: pricing.withFilter.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
   /**
    * Title field in *Pricing → With Filter → Primary*
    *
@@ -3699,6 +3974,17 @@ export interface TeamSliceDefaultPrimaryTeamMembersItem {
  */
 export interface TeamSliceDefaultPrimary {
   /**
+   * Theme field in *Team → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: team.default.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
+  /**
    * Title field in *Team → Default → Primary*
    *
    * - **Field Type**: Title
@@ -3885,6 +4171,17 @@ export interface TestimonialsSliceScrollingCardsPrimaryQuotesItem {
  */
 export interface TestimonialsSliceDefaultPrimary {
   /**
+   * Theme field in *Testimonials → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: testimonials.default.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
+  /**
    * Title field in *Testimonials → Default → Primary*
    *
    * - **Field Type**: Title
@@ -3945,6 +4242,17 @@ export type TestimonialsSliceDefault = prismic.SharedSliceVariation<
  */
 export interface TestimonialsSliceScrollingCardsPrimary {
   /**
+   * Theme field in *Testimonials → Scrolling cards → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: testimonials.scrollingCards.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
+  /**
    * Title field in *Testimonials → Scrolling cards → Primary*
    *
    * - **Field Type**: Title
@@ -4004,6 +4312,17 @@ export type TestimonialsSliceScrollingCards = prismic.SharedSliceVariation<
  * Primary content in *Testimonials → Two Columns With Separator → Primary*
  */
 export interface TestimonialsSliceTwoColumnsWithSeparatorPrimary {
+  /**
+   * Theme field in *Testimonials → Two Columns With Separator → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: testimonials.twoColumnsWithSeparator.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
   /**
    * Company logo column 1 field in *Testimonials → Two Columns With Separator → Primary*
    *
@@ -4134,6 +4453,17 @@ export type TestimonialsSliceTwoColumnsWithSeparator =
  */
 export interface TestimonialsSliceSingleCenteredPrimary {
   /**
+   * Theme field in *Testimonials → Single Centered → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: testimonials.singleCentered.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
+  /**
    * Company logo field in *Testimonials → Single Centered → Primary*
    *
    * - **Field Type**: Image
@@ -4211,6 +4541,17 @@ export type TestimonialsSliceSingleCentered = prismic.SharedSliceVariation<
  * Primary content in *Testimonials → Single With Large Image → Primary*
  */
 export interface TestimonialsSliceSingleWithLargeImagePrimary {
+  /**
+   * Theme field in *Testimonials → Single With Large Image → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Blue
+   * - **API ID Path**: testimonials.singleWithLargeImage.primary.theme
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
+
   /**
    * Quote field in *Testimonials → Single With Large Image → Primary*
    *
