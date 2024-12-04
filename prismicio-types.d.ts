@@ -3111,21 +3111,6 @@ export interface LogoCloudSliceThreeColumnsPrimaryLogosItem {
 }
 
 /**
- * Item in *LogoCloud → Simple Dark Mode → Primary → Logos*
- */
-export interface LogoCloudSliceSimpleDarkModePrimaryLogosItem {
-  /**
-   * Logo field in *LogoCloud → Simple Dark Mode → Primary → Logos*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: logo_cloud.simpleDarkMode.primary.logos[].logo
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  logo: prismic.ImageField<never>;
-}
-
-/**
  * Primary content in *LogoCloud → Default → Primary*
  */
 export interface LogoCloudSliceDefaultPrimary {
@@ -3305,74 +3290,12 @@ export type LogoCloudSliceSingle = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *LogoCloud → Simple Dark Mode → Primary*
- */
-export interface LogoCloudSliceSimpleDarkModePrimary {
-  /**
-   * Theme field in *LogoCloud → Simple Dark Mode → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: Blue
-   * - **API ID Path**: logo_cloud.simpleDarkMode.primary.theme
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
-
-  /**
-   * Title field in *LogoCloud → Simple Dark Mode → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: This is where it all begins...
-   * - **API ID Path**: logo_cloud.simpleDarkMode.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.RichTextField;
-
-  /**
-   * Logos field in *LogoCloud → Simple Dark Mode → Primary*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: logo_cloud.simpleDarkMode.primary.logos[]
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  logos: prismic.GroupField<
-    Simplify<LogoCloudSliceSimpleDarkModePrimaryLogosItem>
-  >;
-
-  /**
-   * anchor field in *LogoCloud → Simple Dark Mode → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: optional
-   * - **API ID Path**: logo_cloud.simpleDarkMode.primary.anchor
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  anchor: prismic.KeyTextField;
-}
-
-/**
- * Simple Dark Mode variation for LogoCloud Slice
- *
- * - **API ID**: `simpleDarkMode`
- * - **Description**: LogoCloud
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type LogoCloudSliceSimpleDarkMode = prismic.SharedSliceVariation<
-  "simpleDarkMode",
-  Simplify<LogoCloudSliceSimpleDarkModePrimary>,
-  never
->;
-
-/**
  * Slice variation for *LogoCloud*
  */
 type LogoCloudSliceVariation =
   | LogoCloudSliceDefault
   | LogoCloudSliceThreeColumns
-  | LogoCloudSliceSingle
-  | LogoCloudSliceSimpleDarkMode;
+  | LogoCloudSliceSingle;
 
 /**
  * LogoCloud Shared Slice
@@ -4947,13 +4870,10 @@ declare module "@prismicio/client" {
       LogoCloudSliceThreeColumnsPrimaryLogosItem,
       LogoCloudSliceThreeColumnsPrimary,
       LogoCloudSliceSinglePrimary,
-      LogoCloudSliceSimpleDarkModePrimaryLogosItem,
-      LogoCloudSliceSimpleDarkModePrimary,
       LogoCloudSliceVariation,
       LogoCloudSliceDefault,
       LogoCloudSliceThreeColumns,
       LogoCloudSliceSingle,
-      LogoCloudSliceSimpleDarkMode,
       PricingSlice,
       PricingSliceDefaultPrimaryPlansItem,
       PricingSliceDefaultPrimary,
