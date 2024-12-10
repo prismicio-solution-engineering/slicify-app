@@ -9,9 +9,7 @@ export default function CtaSimple({
   slice,
   withBackground = true,
 }: {
-  slice:
-    | Content.CallToActionSliceDefault
-    | Content.CallToActionSliceWhiteBackground;
+  slice: Content.CallToActionSliceDefault;
   withBackground: boolean;
 }) {
   const themeColor =
