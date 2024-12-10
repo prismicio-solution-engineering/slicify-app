@@ -9,7 +9,7 @@
 					{
 						"type": "heading2",
 						"content": {
-							"text": "Claws"
+							"text": "Breathing"
 						}
 					}
 				]
@@ -35,52 +35,6 @@
 				"value": {
 					"__TYPE__": "ExternalLink",
 					"url": "http://twitter.com"
-				}
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "whiteBackground",
-		"primary": {
-			"title": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading2",
-						"content": {
-							"text": "Riding"
-						}
-					}
-				]
-			},
-			"description": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Est occaecat dolor labore pariatur amet officia officia deserunt cupidatat quis duis pariatur. Et duis non do esse quis consectetur sit esse in id. Dolor cupidatat mollit veniam cupidatat."
-						}
-					}
-				]
-			},
-			"cta_label": {
-				"__TYPE__": "FieldContent",
-				"value": "understanding",
-				"type": "Text"
-			},
-			"cta_link": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://prismic.io"
 				}
 			}
 		},
@@ -169,12 +123,59 @@
 								{
 									"__TYPE__": "FieldContent",
 									"type": "Select",
+									"value": "Primary"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"cta_label",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "toto"
+								}
+							],
+							[
+								"cta_type",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
+									"value": "Secondary"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"cta_label",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "tutu"
+								}
+							],
+							[
+								"cta_type",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Select",
 									"value": "Text"
 								}
 							]
 						]
 					}
 				]
+			},
+			"theme": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "Blue"
 			}
 		},
 		"items": [

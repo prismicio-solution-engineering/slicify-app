@@ -1143,12 +1143,12 @@ export interface CallToActionSliceDefaultPrimary {
   /**
    * Title field in *CallToAction → Default → Primary*
    *
-   * - **Field Type**: Title
+   * - **Field Type**: Rich Text
    * - **Placeholder**: This is where it all begins...
    * - **API ID Path**: call_to_action.default.primary.title
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  title: prismic.TitleField;
+  title: prismic.RichTextField;
 
   /**
    * Description field in *CallToAction → Default → Primary*
@@ -1201,85 +1201,6 @@ export interface CallToActionSliceDefaultPrimary {
 export type CallToActionSliceDefault = prismic.SharedSliceVariation<
   "default",
   Simplify<CallToActionSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Primary content in *CallToAction → White Background → Primary*
- */
-export interface CallToActionSliceWhiteBackgroundPrimary {
-  /**
-   * Theme field in *CallToAction → White Background → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: Blue
-   * - **API ID Path**: call_to_action.whiteBackground.primary.theme
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
-
-  /**
-   * Title field in *CallToAction → White Background → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: This is where it all begins...
-   * - **API ID Path**: call_to_action.whiteBackground.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.RichTextField;
-
-  /**
-   * Description field in *CallToAction → White Background → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.whiteBackground.primary.description
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * Cta Label field in *CallToAction → White Background → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.whiteBackground.primary.cta_label
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  cta_label: prismic.KeyTextField;
-
-  /**
-   * Cta Link field in *CallToAction → White Background → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.whiteBackground.primary.cta_link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  cta_link: prismic.LinkField;
-
-  /**
-   * anchor field in *CallToAction → White Background → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: optional
-   * - **API ID Path**: call_to_action.whiteBackground.primary.anchor
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  anchor: prismic.KeyTextField;
-}
-
-/**
- * White Background variation for CallToAction Slice
- *
- * - **API ID**: `whiteBackground`
- * - **Description**: CallToAction
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type CallToActionSliceWhiteBackground = prismic.SharedSliceVariation<
-  "whiteBackground",
-  Simplify<CallToActionSliceWhiteBackgroundPrimary>,
   never
 >;
 
@@ -1450,7 +1371,6 @@ export type CallToActionSliceWithImageLeft = prismic.SharedSliceVariation<
  */
 type CallToActionSliceVariation =
   | CallToActionSliceDefault
-  | CallToActionSliceWhiteBackground
   | CallToActionSliceWithImageRight
   | CallToActionSliceWithImageLeft;
 
@@ -4799,14 +4719,12 @@ declare module "@prismicio/client" {
       ArticleListSliceHorizontalList,
       CallToActionSlice,
       CallToActionSliceDefaultPrimary,
-      CallToActionSliceWhiteBackgroundPrimary,
       CallToActionSliceWithImageRightPrimaryButtonsItem,
       CallToActionSliceWithImageRightPrimary,
       CallToActionSliceWithImageLeftPrimaryButtonsItem,
       CallToActionSliceWithImageLeftPrimary,
       CallToActionSliceVariation,
       CallToActionSliceDefault,
-      CallToActionSliceWhiteBackground,
       CallToActionSliceWithImageRight,
       CallToActionSliceWithImageLeft,
       FaqSlice,

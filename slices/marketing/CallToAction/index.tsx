@@ -9,8 +9,6 @@ export default function CallToAction({ slice }: CallToActionProps) {
   switch (slice.variation) {
     case "default":
       return <CtaSimple slice={slice} withBackground={true} />;
-    case "whiteBackground":
-      return <CtaSimple slice={slice} withBackground={false} />;
     case "withImageRight":
       return <CtaWithImage slice={slice} imageRight={true} />;
     case "withImageLeft":
