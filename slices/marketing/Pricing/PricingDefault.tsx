@@ -2,6 +2,7 @@ import type { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { Container } from "@/components/Container";
 import Plan from "./Plan";
+import { ThemeContainer } from "@/components/Theme";
 
 function SwirlyDoodle({ className }: { className: string }) {
   return (
@@ -25,11 +26,15 @@ export default function PricingDefault({
 }: {
   slice: Content.PricingSliceDefault;
 }) {
+  const themeColor =
+    slice.primary.theme === "Blue" || slice.primary.theme === "Dark"
+      ? "dark"
+      : "light";
+
   return (
-    <section
-      id={slice.primary.anchor || undefined}
-      aria-label="Pricing"
-      className="bg-slate-900 py-20 sm:py-32"
+    <ThemeContainer
+      theme={slice.primary.theme}
+      className={`bg-slate-900 py-20 sm:py-32`}
     >
       <Container>
         <div className="md:text-center">
@@ -58,7 +63,7 @@ export default function PricingDefault({
             field={slice.primary.description}
             components={{
               paragraph: ({ children }) => (
-                <p className="mt-4 text-lg text-slate-400">{children}</p>
+                <p className="mt-4 text-lg text-light-gray">{children}</p>
               ),
             }}
           />
@@ -74,6 +79,7 @@ export default function PricingDefault({
         >
           {slice.primary.plans?.map((plan, index) => (
             <Plan
+              themeColor={themeColor}
               key={"plan" + plan.name + index}
               name={plan.name}
               price={plan.price}
@@ -85,6 +91,6 @@ export default function PricingDefault({
           ))}
         </div>
       </Container>
-    </section>
+    </ThemeContainer>
   );
 }
