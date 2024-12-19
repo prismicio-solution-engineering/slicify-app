@@ -234,9 +234,11 @@ export default function FeaturesVertical({
     <section
       id={slice.primary.anchor || undefined}
       aria-label="Features for simplifying everyday business tasks"
-      className="pb-14 pt-20 sm:pb-20 sm:pt-32 lg:pb-32"
     >
-      <ThemeContainer theme={slice.primary.theme}>
+      <ThemeContainer
+        theme={slice.primary.theme}
+        className="pb-14 pt-20 sm:pb-20 sm:pt-32 lg:pb-32"
+      >
         <Container>
           <div className="mx-auto max-w-2xl md:text-center">
             <PrismicRichText

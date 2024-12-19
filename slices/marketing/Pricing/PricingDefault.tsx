@@ -192,75 +192,77 @@ export default function PricingDefault({
       : "light";
 
   return (
-    <ThemeContainer
-      theme={slice.primary.theme}
-      className={`bg-slate-900 py-20 sm:py-32`}
-    >
-      <Container>
-        <div className="md:text-center">
-          {" "}
-          <PrismicRichText
-            field={slice.primary.title}
-            components={{
-              heading2: ({ children }) => (
-                <h2
-                  className={`font-display text-3xl tracking-tight ${
-                    themeColor === "dark" ? "text-white" : "text-dark-gray"
-                  } sm:text-4xl`}
-                >
-                  {children}
-                </h2>
-              ),
-              strong: ({ children }) => {
-                return (
-                  <>
-                    <span className="relative whitespace-nowrap">
-                      <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-blue-400" />
-                      <span className="relative">{children}</span>
-                    </span>
-                  </>
-                );
-              },
-            }}
-          />
-          <PrismicRichText
-            field={slice.primary.description}
-            components={{
-              paragraph: ({ children }) => (
-                <p
-                  className={`mt-4 text-lg ${
-                    themeColor === "dark" ? "text-white" : "text-light-black"
-                  }`}
-                >
-                  {children}
-                </p>
-              ),
-            }}
-          />
-        </div>
-        <div
-          className={`-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none ${
-            slice.primary.plans?.length === 1
-              ? "lg:justify-items-center"
-              : slice.primary.plans?.length === 2
-              ? "lg:grid-cols-2 lg:auto-cols-fr lg:justify-items-center"
-              : "lg:grid-cols-3"
-          } xl:mx-0 xl:gap-x-8`}
-        >
-          {slice.primary.plans?.map((plan, index) => (
-            <Plan
-              themeColor={themeColor}
-              key={"plan" + plan.name + index}
-              name={plan.name}
-              price={plan.price}
-              description={plan.description}
-              link={plan.register_link}
-              features={plan.features}
-              featured={plan.featured}
+    <section id={slice.primary.anchor || undefined} aria-label="Pricing">
+      <ThemeContainer
+        theme={slice.primary.theme}
+        className={`bg-slate-900 py-20 sm:py-32`}
+      >
+        <Container>
+          <div className="md:text-center">
+            {" "}
+            <PrismicRichText
+              field={slice.primary.title}
+              components={{
+                heading2: ({ children }) => (
+                  <h2
+                    className={`font-display text-3xl tracking-tight ${
+                      themeColor === "dark" ? "text-white" : "text-dark-gray"
+                    } sm:text-4xl`}
+                  >
+                    {children}
+                  </h2>
+                ),
+                strong: ({ children }) => {
+                  return (
+                    <>
+                      <span className="relative whitespace-nowrap">
+                        <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-blue-400" />
+                        <span className="relative">{children}</span>
+                      </span>
+                    </>
+                  );
+                },
+              }}
             />
-          ))}
-        </div>
-      </Container>
-    </ThemeContainer>
+            <PrismicRichText
+              field={slice.primary.description}
+              components={{
+                paragraph: ({ children }) => (
+                  <p
+                    className={`mt-4 text-lg ${
+                      themeColor === "dark" ? "text-white" : "text-light-black"
+                    }`}
+                  >
+                    {children}
+                  </p>
+                ),
+              }}
+            />
+          </div>
+          <div
+            className={`-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none ${
+              slice.primary.plans?.length === 1
+                ? "lg:justify-items-center"
+                : slice.primary.plans?.length === 2
+                ? "lg:grid-cols-2 lg:auto-cols-fr lg:justify-items-center"
+                : "lg:grid-cols-3"
+            } xl:mx-0 xl:gap-x-8`}
+          >
+            {slice.primary.plans?.map((plan, index) => (
+              <Plan
+                themeColor={themeColor}
+                key={"plan" + plan.name + index}
+                name={plan.name}
+                price={plan.price}
+                description={plan.description}
+                link={plan.register_link}
+                features={plan.features}
+                featured={plan.featured}
+              />
+            ))}
+          </div>
+        </Container>
+      </ThemeContainer>
+    </section>
   );
 }

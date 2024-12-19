@@ -42,9 +42,11 @@ export default function FeaturesHorizontal({
     <section
       id={slice.primary.anchor || undefined}
       aria-label="Features for running your books"
-      className="relative overflow-hidden pb-28 pt-20 sm:py-32"
     >
-      <ThemeContainer theme={slice.primary.theme}>
+      <ThemeContainer
+        theme={slice.primary.theme}
+        className="relative overflow-hidden pb-28 pt-20 sm:py-32"
+      >
         <Container className="relative">
           <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
             <PrismicRichText
@@ -102,11 +104,14 @@ export default function FeaturesHorizontal({
                               ? "lg:rounded-l-xl lg:rounded-r-none"
                               : "lg:rounded-l-none lg:rounded-r-xl"
                           } lg:p-6`,
-                          themeColor === "dark" && selectedIndex === featureIndex
+                          themeColor === "dark" &&
+                            selectedIndex === featureIndex
                             ? "bg-white lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10"
-                            : themeColor === "dark" && selectedIndex !== featureIndex
+                            : themeColor === "dark" &&
+                              selectedIndex !== featureIndex
                             ? "hover:bg-white/10 lg:hover:bg-white/5"
-                            : themeColor === "light" && selectedIndex === featureIndex
+                            : themeColor === "light" &&
+                              selectedIndex === featureIndex
                             ? "lg:bg-light-blue/10 lg:ring-1 lg:ring-inset lg:ring-light-blue-70/10"
                             : "hover:bg-light-blue-70 lg:hover:bg-light-blue/5"
                         )}
