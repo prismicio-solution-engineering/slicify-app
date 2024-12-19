@@ -119,7 +119,7 @@ export default function FeaturesHorizontal({
                         <h3>
                           <Tab
                             className={clsx(
-                              "font-display text-lg text-left focus-visible:outline-0 ",
+                              "font-display text-lg text-left focus-visible:outline-0",
                               themeColor === "dark" &&
                                 selectedIndex === featureIndex
                                 ? "text-blue-600 lg:text-white"
