@@ -5,7 +5,7 @@ export const ShowcaseCard = ({ website }: { website: Website }) => {
   return (
     <PrismicLink
       field={website?.link}
-      className="block rounded-3xl border border-light-gray p-3 pb-4 hover:border-light-blue hover:bg-gray-50 transition-colors"
+      className="block rounded-3xl border border-light-gray bg-white p-3 pb-4 hover:border-light-blue hover:bg-light-gray transition-colors"
     >
       <div className="relative">
         <div className="absolute inset-0 rounded-xl shadow-website-screenshot" />

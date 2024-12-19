@@ -7,6 +7,7 @@ import {
   WebsiteDocument,
   getShowcaseWebsites,
 } from "@/utils/getShowcaseWebsites";
+import { ThemeContainer } from "@/components/Theme";
 
 export type Website = {
   name: string;
@@ -64,54 +65,89 @@ const FeaturedWebsitesList = async ({ slice }: FeaturedWebsitesListProps) => {
             } as IntegrationField<Website>)!)
         );
 
+  const themeColor =
+    slice.primary.theme === "Blue" || slice.primary.theme === "Dark"
+      ? "dark"
+      : "light";
+
   return (
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       id={slice.primary.anchor || undefined}
-      className="py-16 sm:px-16 md:py-24 lg:py-24"
     >
-      <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
-        <PrismicRichText
-          field={slice.primary.title}
-          components={{
-            heading2: ({ children }) => (
-              <h2 className="text-3xl text-center font-display leading-10 tracking-tight text-gray-900">
-                {children}
-              </h2>
-            ),
-            strong: ({ children }) => {
-              return (
-                <>
-                  <span className="relative whitespace-nowrap text-blue-600">
-                    <UnderlineDoodle className="absolute left-0 top-2/3 h-[0.58em] w-full fill-blue-300/70" />
-                    <span className="relative">{children}</span>
-                  </span>
-                </>
-              );
-            },
-          }}
-        />
-        <PrismicRichText
-          field={slice.primary.description}
-          components={{
-            paragraph: ({ children }) => (
-              <p className="mt-4 text-lg tracking-tight text-slate-700">
-                {children}
-              </p>
-            ),
-          }}
-        />
-      </div>
-      {websiteList?.length > 0 ? (
-        <Container className="grid gird-cols-1 py-16 px-10 sm:grid-cols-2 lg:grid-cols-3 gap-4 2xl:gap-6">
-          {websiteList.map((website: Website, idx: number) => (
-            <ShowcaseCard website={website} key={idx} />
-          ))}
-        </Container>
-      ) : (
-        <p>No results</p>
-      )}
+      <ThemeContainer
+        theme={slice.primary.theme}
+        className="py-16 sm:px-16 md:py-24 lg:py-24"
+      >
+        <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
+          <PrismicRichText
+            field={slice.primary.title}
+            components={{
+              heading2: ({ children }) => (
+                <h2
+                  className={`text-3xl text-center font-display leading-10 tracking-tight ${
+                    themeColor === "dark" ? "text-white" : "text-dark-gray"
+                  }`}
+                >
+                  {children}
+                </h2>
+              ),
+              strong: ({ children }) => {
+                return (
+                  <>
+                    <span
+                      className={`relative whitespace-nowrap ${
+                        themeColor === "dark"
+                          ? "text-white"
+                          : "text-vibrant-blue"
+                      }`}
+                    >
+                      <UnderlineDoodle
+                        className={`absolute left-0 top-2/3 h-[0.58em] w-full ${
+                          themeColor === "dark"
+                            ? "fill-white"
+                            : "fill-blue-300/70"
+                        }`}
+                      />
+                      <span className="relative">{children}</span>
+                    </span>
+                  </>
+                );
+              },
+            }}
+          />
+          <PrismicRichText
+            field={slice.primary.description}
+            components={{
+              paragraph: ({ children }) => (
+                <p
+                  className={`mt-4 text-lg tracking-tight ${
+                    themeColor === "dark"
+                      ? "text-light-gray"
+                      : "text-light-black"
+                  }`}
+                >
+                  {children}
+                </p>
+              ),
+            }}
+          />
+        </div>
+        {websiteList?.length > 0 ? (
+          <Container className="grid gird-cols-1 py-16 px-10 sm:grid-cols-2 lg:grid-cols-3 gap-4 2xl:gap-6">
+            {websiteList.map((website: Website, idx: number) => (
+              <ShowcaseCard website={website} key={idx} />
+            ))}
+          </Container>
+        ) : (
+          <p className={`py-16 px-10 text-center ${
+            themeColor === "dark"
+              ? "text-light-gray"
+              : "text-light-black"
+          }`}>No results</p>
+        )}
+      </ThemeContainer>
     </section>
   );
 };
