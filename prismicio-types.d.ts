@@ -1462,31 +1462,6 @@ export interface FaqSliceCenteredPrimaryFaqItem {
 }
 
 /**
- * Item in *Faq → Centered With Background → Primary → FAQ*
- */
-export interface FaqSliceCenteredWithBackgroundPrimaryFaqItem {
-  /**
-   * Question field in *Faq → Centered With Background → Primary → FAQ*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: faq.centeredWithBackground.primary.faq[].question
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  question: prismic.RichTextField;
-
-  /**
-   * Answer field in *Faq → Centered With Background → Primary → FAQ*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: faq.centeredWithBackground.primary.faq[].answer
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  answer: prismic.RichTextField;
-}
-
-/**
  * Primary content in *Faq → Two Columns → Primary*
  */
 export interface FaqSliceTwoColumnsPrimary {
@@ -1684,74 +1659,12 @@ export type FaqSliceCentered = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *Faq → Centered With Background → Primary*
- */
-export interface FaqSliceCenteredWithBackgroundPrimary {
-  /**
-   * Theme field in *Faq → Centered With Background → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **Default Value**: Blue
-   * - **API ID Path**: faq.centeredWithBackground.primary.theme
-   * - **Documentation**: https://prismic.io/docs/field#select
-   */
-  theme: prismic.SelectField<"Blue" | "Dark" | "Light" | "White", "filled">;
-
-  /**
-   * Title field in *Faq → Centered With Background → Primary*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: This is where it all begins...
-   * - **API ID Path**: faq.centeredWithBackground.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.TitleField;
-
-  /**
-   * FAQ field in *Faq → Centered With Background → Primary*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: faq.centeredWithBackground.primary.faq[]
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  faq: prismic.GroupField<
-    Simplify<FaqSliceCenteredWithBackgroundPrimaryFaqItem>
-  >;
-
-  /**
-   * anchor field in *Faq → Centered With Background → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: optional
-   * - **API ID Path**: faq.centeredWithBackground.primary.anchor
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  anchor: prismic.KeyTextField;
-}
-
-/**
- * Centered With Background variation for Faq Slice
- *
- * - **API ID**: `centeredWithBackground`
- * - **Description**: Faq
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type FaqSliceCenteredWithBackground = prismic.SharedSliceVariation<
-  "centeredWithBackground",
-  Simplify<FaqSliceCenteredWithBackgroundPrimary>,
-  never
->;
-
-/**
  * Slice variation for *Faq*
  */
 type FaqSliceVariation =
   | FaqSliceTwoColumns
   | FaqSliceThreeColumns
-  | FaqSliceCentered
-  | FaqSliceCenteredWithBackground;
+  | FaqSliceCentered;
 
 /**
  * Faq Shared Slice
@@ -4734,13 +4647,10 @@ declare module "@prismicio/client" {
       FaqSliceThreeColumnsPrimary,
       FaqSliceCenteredPrimaryFaqItem,
       FaqSliceCenteredPrimary,
-      FaqSliceCenteredWithBackgroundPrimaryFaqItem,
-      FaqSliceCenteredWithBackgroundPrimary,
       FaqSliceVariation,
       FaqSliceTwoColumns,
       FaqSliceThreeColumns,
       FaqSliceCentered,
-      FaqSliceCenteredWithBackground,
       FeaturedWebsitesListSlice,
       FeaturedWebsitesListSliceDefaultPrimaryWebsitesItem,
       FeaturedWebsitesListSliceDefaultPrimary,
