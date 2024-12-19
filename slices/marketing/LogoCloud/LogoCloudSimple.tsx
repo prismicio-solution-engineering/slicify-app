@@ -15,11 +15,11 @@ export default function LogoCloudSimple({
       : "light";
 
   return (
-    <section
-      id={slice.primary.anchor || undefined}
-      className={`pb-16 pt-20 lg:pt-32`}
-    >
-      <ThemeContainer theme={slice.primary.theme}>
+    <section id={slice.primary.anchor || undefined}>
+      <ThemeContainer
+        theme={slice.primary.theme}
+        className="pb-16 pt-20 lg:pt-32"
+      >
         <Container className="text-center">
           <PrismicRichText
             field={slice.primary.title}
