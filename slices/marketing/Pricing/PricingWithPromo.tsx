@@ -1,61 +1,65 @@
 import type { Content } from "@prismicio/client";
 import { PrismicLink, PrismicRichText } from "@prismicio/react";
-import Image from "next/image";
-import backgroundImage from "@/images/background-features.jpg";
 import clsx from "clsx";
 import { SwirlyDoodle } from "@/components/SwirlyDoodle";
 import Plan from "./Plan";
+import { ThemeContainer } from "@/components/Theme";
 
 export default function PricingWithPromo({
   slice,
 }: {
   slice: Content.PricingSliceWithPromo;
 }) {
+  const themeColor =
+    slice.primary.theme === "Blue" || slice.primary.theme === "Dark"
+      ? "dark"
+      : "light";
+
   return (
-    <section
-      id={slice.primary.anchor || undefined}
-      aria-label="Pricing"
-      className="" //py-20 sm:py-32
-    >
+    <section id={slice.primary.anchor || undefined} aria-label="Pricing">
       <div className="relative overflow-hidden">
-        <Image
-          className="absolute -z-50"
-          src={backgroundImage}
-          alt=""
-          width={2245}
-          height={1636}
-          unoptimized
-        />
-        <div className="mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8">
-          <PrismicRichText
-            field={slice.primary.title}
-            components={{
-              heading2: ({ children }) => (
-                <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
-                  {children}
-                </h2>
-              ),
-              strong: ({ children }) => {
-                return (
-                  <>
-                    <span className="relative whitespace-nowrap">
-                      <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-blue-400" />
-                      <span className="relative">{children}</span>
-                    </span>
-                  </>
-                );
-              },
-            }}
-          />
-          <PrismicRichText
-            field={slice.primary.description}
-            components={{
-              paragraph: ({ children }) => (
-                <p className="mt-4 text-lg text-slate-200">{children}</p>
-              ),
-            }}
-          />
-        </div>
+        <ThemeContainer theme={slice.primary.theme}>
+          <div className="mx-auto max-w-7xl px-6 pb-96 pt-24 text-center sm:pt-32 lg:px-8">
+            <PrismicRichText
+              field={slice.primary.title}
+              components={{
+                heading2: ({ children }) => (
+                  <h2
+                    className={`font-display text-3xl tracking-tight ${
+                      themeColor === "dark" ? "text-white" : "text-dark-gray"
+                    } sm:text-4xl`}
+                  >
+                    {children}
+                  </h2>
+                ),
+                strong: ({ children }) => {
+                  return (
+                    <>
+                      <span className="relative whitespace-nowrap">
+                        <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-blue-400" />
+                        <span className="relative">{children}</span>
+                      </span>
+                    </>
+                  );
+                },
+              }}
+            />
+            <PrismicRichText
+              field={slice.primary.description}
+              components={{
+                paragraph: ({ children }) => (
+                  <p
+                    className={`mt-4 text-lg ${
+                      themeColor === "dark" ? "text-white" : "text-light-black"
+                    }`}
+                  >
+                    {children}
+                  </p>
+                ),
+              }}
+            />
+          </div>
+        </ThemeContainer>
         <div className="flow-root bg-white pb-24 sm:pb-32">
           <div className="-mt-80">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">

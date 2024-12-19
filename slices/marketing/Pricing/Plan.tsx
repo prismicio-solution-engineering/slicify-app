@@ -1,7 +1,6 @@
 import type * as prismic from "@prismicio/client";
 import clsx from "clsx";
 import { PrismicRichText } from "@prismicio/react";
-
 import { Button } from "@/components/Button";
 
 function CheckIcon({ className }: { className: string }) {
@@ -31,7 +30,6 @@ function CheckIcon({ className }: { className: string }) {
 }
 
 export default function Plan({
-  themeColor,
   name,
   price,
   description,
@@ -40,7 +38,6 @@ export default function Plan({
   featured = false,
   lightTheme = false,
 }: {
-  themeColor: prismic.SelectField;
   name: prismic.KeyTextField;
   price: prismic.KeyTextField;
   description: prismic.RichTextField;
@@ -54,9 +51,9 @@ export default function Plan({
       className={clsx(
         "flex flex-col rounded-3xl px-6 sm:px-8 lg:max-w-md",
         featured
-          ? `order-first py-8 lg:order-none ${themeColor === "dark" ? "bg-vibrant-blue" : "bg-light-blue"}`
-          : `lg:py-8 border-2 ${themeColor === "dark" ? "bg-slate-900 border-light-blue-70" : "bg-white drop-shadow py-8"}`,
-        // lightTheme && "bg-white drop-shadow py-8"
+          ? "order-first bg-blue-600 py-8 lg:order-none"
+          : "lg:py-8 border-2 border-light-blue-70",
+        lightTheme && "bg-white drop-shadow py-8"
       )}
     >
       <h3
