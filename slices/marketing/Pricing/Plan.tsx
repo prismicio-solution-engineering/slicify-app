@@ -1,7 +1,6 @@
 import type * as prismic from "@prismicio/client";
 import clsx from "clsx";
 import { PrismicRichText } from "@prismicio/react";
-
 import { Button } from "@/components/Button";
 
 function CheckIcon({ className }: { className: string }) {

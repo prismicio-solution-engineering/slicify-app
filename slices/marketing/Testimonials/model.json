@@ -11,6 +11,20 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Testimonials",
       "primary": {
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "Blue",
+              "Dark",
+              "Light",
+              "White"
+            ],
+            "default_value": "Blue"
+          }
+        },
         "title": {
           "type": "StructuredText",
           "config": {
@@ -84,7 +98,8 @@
           }
         }
       },
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+      "items": {}
     },
     {
       "id": "scrollingCards",
@@ -93,6 +108,20 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Testimonials",
       "primary": {
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "Blue",
+              "Dark",
+              "Light",
+              "White"
+            ],
+            "default_value": "Blue"
+          }
+        },
         "title": {
           "type": "StructuredText",
           "config": {
@@ -166,7 +195,8 @@
           }
         }
       },
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+      "items": {}
     },
     {
       "id": "twoColumnsWithSeparator",
@@ -175,6 +205,20 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Testimonials",
       "primary": {
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "Blue",
+              "Dark",
+              "Light",
+              "White"
+            ],
+            "default_value": "Blue"
+          }
+        },
         "company_logo_column_1": {
           "type": "Image",
           "config": {
@@ -289,6 +333,20 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Testimonials",
       "primary": {
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "Blue",
+              "Dark",
+              "Light",
+              "White"
+            ],
+            "default_value": "Blue"
+          }
+        },
         "company_logo": {
           "type": "Image",
           "config": {
@@ -355,6 +413,20 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Testimonials",
       "primary": {
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "Blue",
+              "Dark",
+              "Light",
+              "White"
+            ],
+            "default_value": "Blue"
+          }
+        },
         "quote": {
           "type": "StructuredText",
           "config": {

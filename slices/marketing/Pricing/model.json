@@ -11,6 +11,20 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Pricing",
       "primary": {
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "Blue",
+              "Dark",
+              "Light",
+              "White"
+            ],
+            "default_value": "Blue"
+          }
+        },
         "title": {
           "type": "StructuredText",
           "config": {
@@ -105,6 +119,20 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Pricing",
       "primary": {
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "Blue",
+              "Dark",
+              "Light",
+              "White"
+            ],
+            "default_value": "Blue"
+          }
+        },
         "title": {
           "type": "StructuredText",
           "config": {
@@ -223,6 +251,20 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Pricing",
       "primary": {
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "Blue",
+              "Dark",
+              "Light",
+              "White"
+            ],
+            "default_value": "Blue"
+          }
+        },
         "title": {
           "type": "StructuredText",
           "config": {

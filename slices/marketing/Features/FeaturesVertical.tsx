@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import type { Content } from "@prismicio/client";
 import { PrismicRichText } from "@prismicio/react";
@@ -12,11 +12,13 @@ import {
   FeaturesSliceAbovePrimaryFeaturesItem,
   FeaturesSliceBelowPrimaryFeaturesItem,
 } from "@/prismicio-types";
+import { ThemeContainer } from "@/components/Theme";
 
 function Feature({
   feature,
   isActive,
   className,
+  themeColor,
   ...props
 }: {
   feature: (
@@ -25,6 +27,7 @@ function Feature({
   ) & { eyebrowElement?: JSX.Element };
   isActive: boolean;
   className: string;
+  themeColor: "dark" | "light";
 }) {
   return (
     <div
@@ -43,12 +46,20 @@ function Feature({
           sizes="52.75rem"
         />
       </div>
-      {feature.eyebrowElement}
+      <div
+        className={`${themeColor === "dark" ? "text-white" : "text-dark-gray"}`}
+      >
+        {feature.eyebrowElement}
+      </div>
       <PrismicRichText
         field={feature.feature_title}
         components={{
           paragraph: ({ children }) => (
-            <p className="mt-2 font-display text-xl text-slate-900">
+            <p
+              className={`mt-2 font-display text-xl ${
+                themeColor === "dark" ? "text-white" : "text-dark-gray"
+              }`}
+            >
               {children}
             </p>
           ),
@@ -58,7 +69,13 @@ function Feature({
         field={feature.feature_description}
         components={{
           paragraph: ({ children }) => (
-            <p className="mt-4 text-sm text-slate-600">{children}</p>
+            <p
+              className={`mt-4 text-sm ${
+                themeColor === "dark" ? "text-white" : "text-dark-gray"
+              }`}
+            >
+              {children}
+            </p>
           ),
         }}
       />
@@ -68,14 +85,21 @@ function Feature({
 
 function FeaturesMobile({
   slice,
+  themeColor,
 }: {
   slice: Content.FeaturesSliceBelow | Content.FeaturesSliceAbove;
+  themeColor: "dark" | "light";
 }) {
   return (
     <div className="-mx-4 mt-20 flex flex-col gap-y-10 overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:hidden">
       {slice.primary.features?.map((feature) => (
         <div key={asText(feature.feature_title)}>
-          <Feature feature={feature} className="mx-auto max-w-2xl" isActive />
+          <Feature
+            feature={feature}
+            themeColor={themeColor}
+            className="mx-auto max-w-2xl"
+            isActive
+          />
           <div className="relative mt-10 pb-10">
             <div className="absolute -inset-x-4 bottom-0 top-8 bg-slate-200 sm:-inset-x-6" />
             <div className="relative mx-auto w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
@@ -95,9 +119,11 @@ function FeaturesMobile({
 function FeaturesDesktop({
   slice,
   above,
+  themeColor,
 }: {
   slice: Content.FeaturesSliceBelow | Content.FeaturesSliceAbove;
   above: boolean;
+  themeColor: "dark" | "light";
 }) {
   return (
     <Tab.Group as="div" className="hidden lg:mt-20 lg:block">
@@ -108,10 +134,17 @@ function FeaturesDesktop({
               {slice.primary.features?.map((feature, featureIndex) => (
                 <Feature
                   key={asText(feature.feature_title)}
+                  themeColor={themeColor}
                   feature={{
                     ...feature,
                     eyebrowElement: (
-                      <Tab className="[&:not(:focus-visible)]:focus:outline-none">
+                      <Tab
+                        className={`focus-visible:outline-0 ${
+                          themeColor === "dark"
+                            ? "text-white"
+                            : "text-dark-gray"
+                        }`}
+                      >
                         <span className="absolute inset-0" />
                         {asText(feature.eyebrow)}
                       </Tab>
@@ -157,10 +190,17 @@ function FeaturesDesktop({
               {slice.primary.features?.map((feature, featureIndex) => (
                 <Feature
                   key={asText(feature.feature_title)}
+                  themeColor={themeColor}
                   feature={{
                     ...feature,
                     eyebrowElement: (
-                      <Tab className="[&:not(:focus-visible)]:focus:outline-none">
+                      <Tab
+                        className={`focus-visible:outline-0 ${
+                          themeColor === "dark"
+                            ? "text-white"
+                            : "text-dark-gray"
+                        }`}
+                      >
                         <span className="absolute inset-0" />
                         {asText(feature.eyebrow)}
                       </Tab>
@@ -185,38 +225,59 @@ export default function FeaturesVertical({
   slice: Content.FeaturesSliceBelow | Content.FeaturesSliceAbove;
   above: boolean;
 }) {
+  const themeColor =
+    slice.primary.theme === "Blue" || slice.primary.theme === "Dark"
+      ? "dark"
+      : "light";
+
   return (
     <section
       id={slice.primary.anchor || undefined}
       aria-label="Features for simplifying everyday business tasks"
-      className="pb-14 pt-20 sm:pb-20 sm:pt-32 lg:pb-32"
     >
-      <Container>
-        <div className="mx-auto max-w-2xl md:text-center">
-          <PrismicRichText
-            field={slice.primary.title}
-            components={{
-              heading2: ({ children }) => (
-                <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-                  {children}
-                </h2>
-              ),
-            }}
+      <ThemeContainer
+        theme={slice.primary.theme}
+        className="pb-14 pt-20 sm:pb-20 sm:pt-32 lg:pb-32"
+      >
+        <Container>
+          <div className="mx-auto max-w-2xl md:text-center">
+            <PrismicRichText
+              field={slice.primary.title}
+              components={{
+                heading2: ({ children }) => (
+                  <h2
+                    className={`font-display text-3xl tracking-tight ${
+                      themeColor === "dark" ? "text-white" : "text-dark-gray"
+                    } sm:text-4xl`}
+                  >
+                    {children}
+                  </h2>
+                ),
+              }}
+            />
+            <PrismicRichText
+              field={slice.primary.subtitle}
+              components={{
+                paragraph: ({ children }) => (
+                  <p
+                    className={`mt-4 text-lg tracking-tight ${
+                      themeColor === "dark" ? "text-white" : "text-light-black"
+                    }`}
+                  >
+                    {children}
+                  </p>
+                ),
+              }}
+            />
+          </div>
+          <FeaturesMobile slice={slice} themeColor={themeColor} />
+          <FeaturesDesktop
+            slice={slice}
+            above={above}
+            themeColor={themeColor}
           />
-          <PrismicRichText
-            field={slice.primary.subtitle}
-            components={{
-              paragraph: ({ children }) => (
-                <p className="mt-4 text-lg tracking-tight text-slate-700">
-                  {children}
-                </p>
-              ),
-            }}
-          />
-        </div>
-        <FeaturesMobile slice={slice} />
-        <FeaturesDesktop slice={slice} above={above} />
-      </Container>
+        </Container>
+      </ThemeContainer>
     </section>
   );
 }

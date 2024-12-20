@@ -1,62 +1,6 @@
 [
 	{
 		"__TYPE__": "SharedSliceContent",
-		"variation": "simple",
-		"primary": {
-			"description": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading2",
-						"content": {
-							"text": "Want product news and updates?",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Sign up for our newsletter.",
-							"spans": []
-						},
-						"direction": "ltr"
-					}
-				]
-			},
-			"placeholder": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "Enter your email"
-			},
-			"subscribe_label": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "Subscribe"
-			},
-			"disclaimer": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "We care about your data. Read our privacy policy.",
-							"spans": []
-						},
-						"direction": "ltr"
-					}
-				]
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
 		"variation": "withDetails",
 		"primary": {
 			"description": {
@@ -251,6 +195,78 @@
 	},
 	{
 		"__TYPE__": "SharedSliceContent",
+		"variation": "simple",
+		"primary": {
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Want product news and updates?",
+							"spans": []
+						},
+						"direction": "ltr"
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sign up for our newsletter.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"placeholder": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Enter your email"
+			},
+			"subscribe_label": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Subscribe"
+			},
+			"disclaimer": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "We care about your data. Read our privacy policy.",
+							"spans": [
+								{
+									"type": "hyperlink",
+									"start": 42,
+									"end": 48,
+									"data": {
+										"__TYPE__": "ExternalLink",
+										"url": "prismic.io",
+										"target": "_blank"
+									}
+								}
+							]
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"theme": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "Blue"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
 		"variation": "centered",
 		"primary": {
 			"description": {
@@ -283,7 +299,18 @@
 						"type": "paragraph",
 						"content": {
 							"text": "We care about your data. Read our privacy policy.",
-							"spans": []
+							"spans": [
+								{
+									"type": "hyperlink",
+									"start": 42,
+									"end": 48,
+									"data": {
+										"__TYPE__": "ExternalLink",
+										"url": "prismic.io",
+										"target": "_blank"
+									}
+								}
+							]
 						},
 						"direction": "ltr"
 					}
@@ -301,6 +328,11 @@
 						"direction": "ltr"
 					}
 				]
+			},
+			"theme": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "Blue"
 			}
 		},
 		"items": [

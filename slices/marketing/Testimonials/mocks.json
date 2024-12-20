@@ -1112,8 +1112,10 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Elit quis officia dolor officia officia do reprehenderit commodo."
-						}
+							"text": "Non in eiusmod labore do reprehenderit incididunt sit nisi. Enim elit cupidatat ipsum mollit fugiat voluptate irure adipisicing. Ipsum incididunt quis ipsum.",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
@@ -1123,8 +1125,10 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Non in eiusmod labore do reprehenderit incididunt sit nisi. Enim elit cupidatat ipsum mollit fugiat voluptate irure adipisicing. Ipsum incididunt quis ipsum."
-						}
+							"text": "Michèle",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
@@ -1134,31 +1138,34 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Eu occaecat irure aute est esse enim et sunt consectetur proident dolore. Eiusmod anim laborum nostrud qui in officia incididunt."
-						}
+							"text": "SE @ Prismic",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
 			"author_image_column_1": {
+				"provider": "imgix",
+				"url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwzfHxwb3J0cmFpdHxlbnwwfHx8fDE3MzQ2MDI0Mzh8MA&ixlib=rb-4.0.3&q=85&rect=0%2C133%2C3276%2C3276&w=56&h=56",
+				"alt": "woman wearing black crew-neck shirt",
 				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a",
-					"width": 3024,
-					"height": 3778
+					"id": "3TLl_97HNJo",
+					"url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwzfHxwb3J0cmFpdHxlbnwwfHx8fDE3MzQ2MDI0Mzh8MA&ixlib=rb-4.0.3&q=85",
+					"width": 3276,
+					"height": 4096
 				},
-				"url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?rect=0%2C377%2C3024%2C3024&w=56&h=56",
 				"width": 56,
 				"height": 56,
 				"edit": {
+					"background": "transparent",
 					"zoom": 1,
 					"crop": {
 						"x": 0,
-						"y": 377
-					},
-					"background": "transparent"
+						"y": 133
+					}
 				},
 				"credits": null,
-				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
@@ -1191,8 +1198,10 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Irure reprehenderit nulla incididunt ad est aliqua culpa elit et exercitation commodo."
-						}
+							"text": "Non in eiusmod labore do reprehenderit incididunt sit nisi. Enim elit cupidatat ipsum mollit fugiat voluptate irure adipisicing. Ipsum incididunt quis ipsum.",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
@@ -1202,8 +1211,10 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Aliquip ut consectetur in sint tempor. Et amet amet amet."
-						}
+							"text": "Michel",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
@@ -1213,33 +1224,41 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Qui consequat id id tempor voluptate pariatur cupidatat dolor quis nisi velit nulla nisi ad duis."
-						}
+							"text": "SE @ Prismic",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
 			"author_image_column_2": {
+				"provider": "imgix",
+				"url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdHxlbnwwfHx8fDE3MzQ2MDI0Mzh8MA&ixlib=rb-4.0.3&q=85&rect=0%2C141%2C3000%2C3000&w=56&h=56",
+				"alt": "man wearing Henley top portrait",
 				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
-					"width": 4000,
-					"height": 4000
+					"id": "7YVZYZeITc8",
+					"url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdHxlbnwwfHx8fDE3MzQ2MDI0Mzh8MA&ixlib=rb-4.0.3&q=85",
+					"width": 3000,
+					"height": 4499
 				},
-				"url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?rect=0%2C0%2C4000%2C4000&w=56&h=56",
 				"width": 56,
 				"height": 56,
 				"edit": {
+					"background": "transparent",
 					"zoom": 1,
 					"crop": {
 						"x": 0,
-						"y": 0
-					},
-					"background": "transparent"
+						"y": 141
+					}
 				},
 				"credits": null,
-				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"theme": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "White"
 			}
 		},
 		"items": [
@@ -1260,14 +1279,14 @@
 					"width": 3277,
 					"height": 4092
 				},
-				"url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055?rect=19%2C0%2C3240%2C4092&w=38&h=48",
-				"width": 38,
+				"url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055?rect=0%2C1839%2C3277%2C414&w=380&h=48",
+				"width": 380,
 				"height": 48,
 				"edit": {
 					"zoom": 1,
 					"crop": {
-						"x": 19,
-						"y": 0
+						"x": 0,
+						"y": 1839
 					},
 					"background": "transparent"
 				},
@@ -1293,8 +1312,10 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Exercitation magna proident dolor exercitation Lorem in mollit. Consectetur Lorem officia cillum enim adipisicing sunt qui."
-						}
+							"text": "Michel",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
@@ -1304,33 +1325,41 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Culpa ullamco elit id laboris nostrud enim deserunt quis dolor irure."
-						}
+							"text": "SE @ Prismic",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
 			"author_image": {
+				"provider": "imgix",
+				"url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxN3x8cG9ydHJhaXR8ZW58MHx8fHwxNzM0NjAyNDM4fDA&ixlib=rb-4.0.3&q=85&rect=0%2C214%2C3744%2C3744&w=56&h=56",
+				"alt": "man's grey and black shirt",
 				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-					"width": 4076,
-					"height": 2712
+					"id": "ILip77SbmOE",
+					"url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwxN3x8cG9ydHJhaXR8ZW58MHx8fHwxNzM0NjAyNDM4fDA&ixlib=rb-4.0.3&q=85",
+					"width": 3744,
+					"height": 5616
 				},
-				"url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?rect=682%2C0%2C2712%2C2712&w=56&h=56",
 				"width": 56,
 				"height": 56,
 				"edit": {
+					"background": "transparent",
 					"zoom": 1,
 					"crop": {
-						"x": 682,
-						"y": 0
-					},
-					"background": "transparent"
+						"x": 0,
+						"y": 214
+					}
 				},
 				"credits": null,
-				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"theme": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "Dark"
 			}
 		},
 		"items": [
@@ -1350,19 +1379,10 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Et exercitation dolor eu."
-						}
-					}
-				]
-			},
-			"author": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Nulla aliqua sit anim voluptate ex et veniam occaecat dolore minim occaecat."
-						}
+							"text": "Nulla aliqua sit anim voluptate ex et veniam occaecat dolore minim occaecat.",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
@@ -1372,33 +1392,53 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Officia laboris est sunt mollit qui. Incididunt officia ea ullamco consectetur ea Lorem excepteur et exercitation et."
-						}
+							"text": "SE @ Prismic",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
 			"author_image": {
+				"__TYPE__": "ImageContent",
+				"provider": "imgix",
+				"url": "https://images.unsplash.com/photo-1506863530036-1efeddceb993?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw4fHxwb3J0cmFpdHxlbnwwfHx8fDE3MzQ2MDI0Mzh8MA&ixlib=rb-4.0.3&q=85&rect=419,0,2975,2975&w=56&h=56",
+				"alt": "grayscale photo of woman wearing necklace and top",
 				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-					"width": 3882,
-					"height": 2584
+					"id": "0fN7Fxv1eWA",
+					"url": "https://images.unsplash.com/photo-1506863530036-1efeddceb993?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw4fHxwb3J0cmFpdHxlbnwwfHx8fDE3MzQ2MDI0Mzh8MA&ixlib=rb-4.0.3&q=85",
+					"width": 3813,
+					"height": 2975
 				},
-				"url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?rect=649%2C0%2C2584%2C2584&w=56&h=56",
 				"width": 56,
 				"height": 56,
 				"edit": {
+					"background": "transparent",
 					"zoom": 1,
 					"crop": {
-						"x": 649,
+						"x": 419,
 						"y": 0
-					},
-					"background": "transparent"
+					}
 				},
-				"credits": null,
-				"alt": null,
-				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"theme": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "Blue"
+			},
+			"author": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Michèle",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
 			}
 		},
 		"items": [

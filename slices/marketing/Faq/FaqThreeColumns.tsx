@@ -1,105 +1,126 @@
 import type { Content } from "@prismicio/client";
 import { Container } from "@/components/Container";
-import { PrismicRichText } from "@prismicio/react";
-import Image from "next/image";
-import backgroundImage from "@/images/background-faqs.jpg";
+import { PrismicLink, PrismicRichText } from "@prismicio/react";
+import { ThemeContainer } from "@/components/Theme";
 
 export default function FaqThreeColumns({
   slice,
+  threeCols,
 }: {
-  slice: Content.FaqSliceThreeColumns;
+  slice: Content.FaqSliceThreeColumns | Content.FaqSliceTwoColumns;
+  threeCols: boolean;
 }) {
+  const themeColor =
+    slice.primary.theme === "Blue" || slice.primary.theme === "Dark"
+      ? "dark"
+      : "light";
+
   return (
-    <section
-      id={slice.primary.anchor || undefined}
-      aria-labelledby="faq-title"
-      className="relative overflow-hidden bg-slate-50 py-20 sm:py-32"
-    >
-      <Image
-        className="absolute left-1/2 top-0 max-w-none -translate-y-1/4 translate-x-[-30%]"
-        src={backgroundImage}
-        alt=""
-        width={1558}
-        height={946}
-        unoptimized
-      />
-      <Container className="relative">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <PrismicRichText
-            field={slice.primary.title}
-            components={{
-              heading2: ({ children }) => (
-                <h2
-                  id="faq-title"
-                  className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl"
-                >
-                  {children}
-                </h2>
-              ),
-            }}
-          />
-          <PrismicRichText
-            field={slice.primary.description}
-            components={{
-              paragraph: ({ children }) => (
-                <p className="mt-4 text-lg tracking-tight text-slate-700">
-                  {children}
-                </p>
-              ),
-              hyperlink: ({ children }) => (
-                <a
-                  href="#"
-                  className="hover:text-indigo-30 font-semibold text-indigo-400 hover:text-indigo-300"
-                >
-                  {children}
-                </a>
-              ),
-            }}
-          />
-        </div>
-        <ul
-          role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3"
-        >
-          {slice.primary.faq?.map((faq, idx) => (
-            <div key={idx}>
-              <dt className="text-base font-semibold leading-7 text-dark-gray">
-                <PrismicRichText
-                  field={faq.question}
-                  components={{
-                    paragraph: ({ children }) => <p>{children}</p>,
-                    hyperlink: ({ children }) => (
-                      <a
-                        href="#"
-                        className="hover:text-indigo-30 font-semibold text-indigo-400 hover:text-indigo-300"
-                      >
-                        {children}
-                      </a>
-                    ),
-                  }}
-                />
-              </dt>
-              <dd className="mt-2 text-base leading-7 text-light-black">
-                <PrismicRichText
-                  field={faq.answer}
-                  components={{
-                    paragraph: ({ children }) => <p>{children}</p>,
-                    hyperlink: ({ children, key }) => (
-                      <a
-                        key={key}
-                        href="#"
-                        className="hover:text-indigo-30 font-semibold text-indigo-400 hover:text-indigo-300"
-                      >
-                        {children}
-                      </a>
-                    ),
-                  }}
-                />
-              </dd>
-            </div>
-          ))}
-        </ul>
-      </Container>
+    <section id={slice.primary.anchor || undefined} aria-labelledby="faq-title">
+      <ThemeContainer
+        theme={slice.primary.theme}
+        className="relative overflow-hidden py-20 sm:py-32"
+      >
+        <Container className="relative">
+          <div className="mx-auto max-w-2xl lg:mx-0">
+            <PrismicRichText
+              field={slice.primary.title}
+              components={{
+                heading2: ({ children }) => (
+                  <h2
+                    id="faq-title"
+                    className={`font-display text-3xl tracking-tight sm:text-4xl ${
+                      themeColor === "dark" ? "text-white" : "text-dark-gray"
+                    }`}
+                  >
+                    {children}
+                  </h2>
+                ),
+              }}
+            />
+            <PrismicRichText
+              field={slice.primary.description}
+              components={{
+                paragraph: ({ children }) => (
+                  <p
+                    className={`mt-4 text-lg tracking-tight ${
+                      themeColor === "dark"
+                        ? "text-light-gray"
+                        : "text-light-black"
+                    }`}
+                  >
+                    {children}
+                  </p>
+                ),
+                hyperlink: ({ children, node }) => (
+                  <PrismicLink
+                    field={node.data}
+                    className="font-semibold text-light-blue hover:text-light-blue-70"
+                  >
+                    {children}
+                  </PrismicLink>
+                ),
+              }}
+            />
+          </div>
+          <div className="mt-12">
+            <dl
+              className={`${
+                threeCols
+                  ? "mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3"
+                  : "space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:gap-x-10"
+              }`}
+            >
+              {slice.primary.faq?.map((faq, idx) => (
+                <div key={idx}>
+                  <dt
+                    className={`text-base font-semibold leading-7 ${
+                      themeColor === "dark" ? "text-white" : "text-dark-gray"
+                    }`}
+                  >
+                    <PrismicRichText
+                      field={faq.question}
+                      components={{
+                        paragraph: ({ children }) => <p>{children}</p>,
+                        hyperlink: ({ children, node }) => (
+                          <PrismicLink
+                            field={node.data}
+                            className="font-semibold text-light-blue hover:text-light-blue-70"
+                          >
+                            {children}
+                          </PrismicLink>
+                        ),
+                      }}
+                    />
+                  </dt>
+                  <dd
+                    className={`mt-2 text-base leading-7 ${
+                      themeColor === "dark"
+                        ? "text-light-gray"
+                        : "text-light-black"
+                    }`}
+                  >
+                    <PrismicRichText
+                      field={faq.answer}
+                      components={{
+                        paragraph: ({ children }) => <p>{children}</p>,
+                        hyperlink: ({ children, node }) => (
+                          <PrismicLink
+                            field={node.data}
+                            className="font-semibold text-light-blue hover:text-light-blue-70"
+                          >
+                            {children}
+                          </PrismicLink>
+                        ),
+                      }}
+                    />
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </Container>
+      </ThemeContainer>
     </section>
   );
 }

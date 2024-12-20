@@ -11,6 +11,20 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Faq",
       "primary": {
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "Blue",
+              "Dark",
+              "Light",
+              "White"
+            ],
+            "default_value": "Blue"
+          }
+        },
         "title": {
           "type": "StructuredText",
           "config": {
@@ -74,6 +88,20 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Faq",
       "primary": {
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "Blue",
+              "Dark",
+              "Light",
+              "White"
+            ],
+            "default_value": "Blue"
+          }
+        },
         "title": {
           "type": "StructuredText",
           "config": {
@@ -137,60 +165,20 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Faq",
       "primary": {
-        "title": {
-          "type": "StructuredText",
+        "theme": {
+          "type": "Select",
           "config": {
-            "label": "Title",
-            "placeholder": "This is where it all begins...",
-            "allowTargetBlank": true,
-            "single": "heading2"
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "Blue",
+              "Dark",
+              "Light",
+              "White"
+            ],
+            "default_value": "Blue"
           }
         },
-        "faq": {
-          "type": "Group",
-          "config": {
-            "label": "FAQ",
-            "repeat": true,
-            "fields": {
-              "question": {
-                "type": "StructuredText",
-                "config": {
-                  "label": "Question",
-                  "placeholder": "",
-                  "allowTargetBlank": true,
-                  "single": "paragraph"
-                }
-              },
-              "answer": {
-                "type": "StructuredText",
-                "config": {
-                  "label": "Answer",
-                  "placeholder": "",
-                  "allowTargetBlank": true,
-                  "multi": "paragraph,preformatted,embed,hyperlink,strong,em"
-                }
-              }
-            }
-          }
-        },
-        "anchor": {
-          "type": "Text",
-          "config": {
-            "label": "anchor",
-            "placeholder": "optional"
-          }
-        }
-      },
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
-      "items": {}
-    },
-    {
-      "id": "centeredWithBackground",
-      "name": "Centered With Background",
-      "docURL": "...",
-      "version": "sktwi1xtmkfgx8626",
-      "description": "Faq",
-      "primary": {
         "title": {
           "type": "StructuredText",
           "config": {

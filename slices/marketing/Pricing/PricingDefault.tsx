@@ -1,7 +1,10 @@
 import type { Content } from "@prismicio/client";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import { PrismicRichText } from "@prismicio/react";
 import { Container } from "@/components/Container";
-import Plan from "./Plan";
+import { ThemeContainer } from "@/components/Theme";
+import type * as prismic from "@prismicio/client";
+import clsx from "clsx";
+import { Button } from "@/components/Button";
 
 function SwirlyDoodle({ className }: { className: string }) {
   return (
@@ -20,71 +23,246 @@ function SwirlyDoodle({ className }: { className: string }) {
   );
 }
 
+function CheckIcon({ className }: { className: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      className={clsx(
+        "h-6 w-6 flex-none fill-current stroke-current",
+        className
+      )}
+    >
+      <path
+        d="M9.307 12.248a.75.75 0 1 0-1.114 1.004l1.114-1.004ZM11 15.25l-.557.502a.75.75 0 0 0 1.15-.043L11 15.25Zm4.844-5.041a.75.75 0 0 0-1.188-.918l1.188.918Zm-7.651 3.043 2.25 2.5 1.114-1.004-2.25-2.5-1.114 1.004Zm3.4 2.457 4.25-5.5-1.187-.918-4.25 5.5 1.188.918Z"
+        strokeWidth={0}
+      />
+      <circle
+        cx={12}
+        cy={12}
+        r={8.25}
+        fill="none"
+        strokeWidth={1.5}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function Plan({
+  themeColor,
+  name,
+  price,
+  description,
+  link,
+  features,
+  featured = false,
+  lightTheme = false,
+}: {
+  themeColor: prismic.SelectField;
+  name: prismic.KeyTextField;
+  price: prismic.KeyTextField;
+  description: prismic.RichTextField;
+  link: prismic.LinkField;
+  features: prismic.RichTextField;
+  featured?: boolean;
+  lightTheme?: boolean;
+}) {
+  return (
+    <section
+      className={clsx(
+        "flex flex-col rounded-3xl px-6 sm:px-8 lg:max-w-md",
+        featured
+          ? "order-first py-8 lg:order-none bg-vibrant-blue"
+          : `lg:py-8 border-2 ${
+              themeColor === "dark"
+                ? "bg-dark-gray border-light-blue-70"
+                : "bg-white drop-shadow-md py-8"
+            }`
+      )}
+    >
+      <h3
+        className={clsx(
+          "mt-5 font-display text-lg",
+          featured || themeColor === "dark" ? "text-white" : "text-slate-800"
+        )}
+      >
+        {name}
+      </h3>
+      <PrismicRichText
+        field={description}
+        components={{
+          paragraph: ({ children }) => (
+            <p
+              className={clsx(
+                "mt-2 text-base",
+                featured
+                  ? "text-white"
+                  : themeColor === "light"
+                  ? "text-slate-600"
+                  : "text-slate-400"
+              )}
+            >
+              {children}
+            </p>
+          ),
+        }}
+      />
+      <p
+        className={clsx(
+          "order-first font-display text-5xl font-light tracking-tight",
+          themeColor === "light" ? "text-slate-800" : "text-white"
+        )}
+      >
+        {price}
+      </p>
+      <Button
+        field={link}
+        variant="solid"
+        color={featured ? "white" : "blue"}
+        className="mt-8"
+        aria-label={`Get started with the ${name} plan for ${price}`}
+      >
+        Get started
+      </Button>
+      <div className="mt-10">
+        <PrismicRichText
+          field={features}
+          components={{
+            paragraph: ({ children }) => (
+              <p
+                className={clsx(
+                  "text-base mb-2",
+                  featured
+                    ? "text-white"
+                    : themeColor === "light"
+                    ? "text-slate-600"
+                    : "text-slate-400"
+                )}
+              >
+                {children}
+              </p>
+            ),
+            list: ({ children }) => (
+              <ul
+                role="list"
+                className={clsx(
+                  "order-last flex flex-col gap-y-3 text-sm",
+                  featured
+                    ? "text-white"
+                    : themeColor === "light"
+                    ? "text-slate-600"
+                    : "text-light-blue-70"
+                )}
+              >
+                {children}
+              </ul>
+            ),
+            listItem: ({ text }) => (
+              <li key={text} className="flex">
+                <CheckIcon
+                  className={clsx(
+                    featured
+                      ? "text-white"
+                      : `${
+                          themeColor === "dark"
+                            ? "text-light-blue-70"
+                            : "text-slate-600"
+                        }`
+                  )}
+                />
+                <span className="ml-4">{text}</span>
+              </li>
+            ),
+          }}
+        />
+      </div>
+    </section>
+  );
+}
+
 export default function PricingDefault({
   slice,
 }: {
   slice: Content.PricingSliceDefault;
 }) {
+  const themeColor =
+    slice.primary.theme === "Blue" || slice.primary.theme === "Dark"
+      ? "dark"
+      : "light";
+
   return (
-    <section
-      id={slice.primary.anchor || undefined}
-      aria-label="Pricing"
-      className="bg-slate-900 py-20 sm:py-32"
-    >
-      <Container>
-        <div className="md:text-center">
-          {" "}
-          <PrismicRichText
-            field={slice.primary.title}
-            components={{
-              heading2: ({ children }) => (
-                <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
-                  {children}
-                </h2>
-              ),
-              strong: ({ children }) => {
-                return (
-                  <>
-                    <span className="relative whitespace-nowrap">
-                      <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-blue-400" />
-                      <span className="relative">{children}</span>
-                    </span>
-                  </>
-                );
-              },
-            }}
-          />
-          <PrismicRichText
-            field={slice.primary.description}
-            components={{
-              paragraph: ({ children }) => (
-                <p className="mt-4 text-lg text-slate-400">{children}</p>
-              ),
-            }}
-          />
-        </div>
-        <div
-          className={`-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none ${
-            slice.primary.plans?.length === 1
-              ? "lg:justify-items-center"
-              : slice.primary.plans?.length === 2
-              ? "lg:grid-cols-2 lg:auto-cols-fr lg:justify-items-center"
-              : "lg:grid-cols-3"
-          } xl:mx-0 xl:gap-x-8`}
-        >
-          {slice.primary.plans?.map((plan, index) => (
-            <Plan
-              key={"plan" + plan.name + index}
-              name={plan.name}
-              price={plan.price}
-              description={plan.description}
-              link={plan.register_link}
-              features={plan.features}
-              featured={plan.featured}
+    <section id={slice.primary.anchor || undefined} aria-label="Pricing">
+      <ThemeContainer
+        theme={slice.primary.theme}
+        className={`bg-slate-900 py-20 sm:py-32`}
+      >
+        <Container>
+          <div className="md:text-center">
+            {" "}
+            <PrismicRichText
+              field={slice.primary.title}
+              components={{
+                heading2: ({ children }) => (
+                  <h2
+                    className={`font-display text-3xl tracking-tight ${
+                      themeColor === "dark" ? "text-white" : "text-dark-gray"
+                    } sm:text-4xl`}
+                  >
+                    {children}
+                  </h2>
+                ),
+                strong: ({ children }) => {
+                  return (
+                    <>
+                      <span className="relative whitespace-nowrap">
+                        <SwirlyDoodle className="absolute left-0 top-1/2 h-[1em] w-full fill-blue-400" />
+                        <span className="relative">{children}</span>
+                      </span>
+                    </>
+                  );
+                },
+              }}
             />
-          ))}
-        </div>
-      </Container>
+            <PrismicRichText
+              field={slice.primary.description}
+              components={{
+                paragraph: ({ children }) => (
+                  <p
+                    className={`mt-4 text-lg ${
+                      themeColor === "dark" ? "text-white" : "text-light-black"
+                    }`}
+                  >
+                    {children}
+                  </p>
+                ),
+              }}
+            />
+          </div>
+          <div
+            className={`-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none ${
+              slice.primary.plans?.length === 1
+                ? "lg:justify-items-center"
+                : slice.primary.plans?.length === 2
+                ? "lg:grid-cols-2 lg:auto-cols-fr lg:justify-items-center"
+                : "lg:grid-cols-3"
+            } xl:mx-0 xl:gap-x-8`}
+          >
+            {slice.primary.plans?.map((plan, index) => (
+              <Plan
+                themeColor={themeColor}
+                key={"plan" + plan.name + index}
+                name={plan.name}
+                price={plan.price}
+                description={plan.description}
+                link={plan.register_link}
+                features={plan.features}
+                featured={plan.featured}
+              />
+            ))}
+          </div>
+        </Container>
+      </ThemeContainer>
     </section>
   );
 }

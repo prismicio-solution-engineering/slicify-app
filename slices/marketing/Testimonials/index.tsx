@@ -17,8 +17,8 @@ export default function Testimonials({ slice }: TestimonialsProps) {
     case "twoColumnsWithSeparator":
       return <TestimonialsColumns slice={slice} />;
     case "singleCentered":
-      return <TestimonialsSingle slice={slice} centered={true} />;
+      return <TestimonialsSingle slice={slice} />;
     case "singleWithLargeImage":
-      return <TestimonialsSingle slice={slice} centered={false} />;
+      return <TestimonialsSingle slice={slice} />;
   }
 }

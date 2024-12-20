@@ -11,57 +11,20 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "CallToAction",
       "primary": {
-        "title": {
-          "type": "StructuredText",
+        "theme": {
+          "type": "Select",
           "config": {
-            "label": "Title",
-            "placeholder": "This is where it all begins...",
-            "allowTargetBlank": true,
-            "single": "heading2"
-          }
-        },
-        "description": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Description",
+            "label": "Theme",
             "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,strong"
+            "options": [
+              "Blue",
+              "Dark",
+              "Light",
+              "White"
+            ],
+            "default_value": "Blue"
           }
         },
-        "cta_label": {
-          "type": "Text",
-          "config": {
-            "label": "Cta Label",
-            "placeholder": ""
-          }
-        },
-        "cta_link": {
-          "type": "Link",
-          "config": {
-            "label": "Cta Link",
-            "placeholder": "",
-            "select": null
-          }
-        },
-        "anchor": {
-          "type": "Text",
-          "config": {
-            "label": "anchor",
-            "placeholder": "optional"
-          }
-        }
-      },
-      "items": {},
-      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-    },
-    {
-      "id": "whiteBackground",
-      "name": "White Background",
-      "docURL": "...",
-      "version": "sktwi1xtmkfgx8626",
-      "description": "CallToAction",
-      "primary": {
         "title": {
           "type": "StructuredText",
           "config": {
@@ -113,6 +76,20 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "CallToAction",
       "primary": {
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "Blue",
+              "Dark",
+              "Light",
+              "White"
+            ],
+            "default_value": "Blue"
+          }
+        },
         "title": {
           "type": "StructuredText",
           "config": {
@@ -197,6 +174,20 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "CallToAction",
       "primary": {
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "Blue",
+              "Dark",
+              "Light",
+              "White"
+            ],
+            "default_value": "Blue"
+          }
+        },
         "title": {
           "type": "StructuredText",
           "config": {

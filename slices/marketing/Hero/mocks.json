@@ -9,8 +9,16 @@
 					{
 						"type": "heading1",
 						"content": {
-							"text": "Practice"
-						}
+							"text": "Slices made simple for all businesses",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 7,
+									"end": 18
+								}
+							]
+						},
+						"direction": "ltr"
 					}
 				]
 			},
@@ -20,8 +28,10 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Commodo ipsum ut esse non laborum ullamco."
-						}
+							"text": "From Figma components to Javascript components to reusable website sections. Bring your website builder to life with Slices.",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
@@ -78,13 +88,18 @@
 								"cta_type",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "Primary",
-									"type": "Select"
+									"type": "Select",
+									"value": "Secondary"
 								}
 							]
 						]
 					}
 				]
+			},
+			"theme": {
+				"__TYPE__": "FieldContent",
+				"value": "Blue",
+				"type": "Select"
 			}
 		},
 		"items": [
@@ -131,133 +146,29 @@
 					{
 						"type": "heading1",
 						"content": {
-							"text": "Beside"
-						}
+							"text": "Slices made simple for all businesses",
+							"spans": [
+								{
+									"type": "strong",
+									"start": 7,
+									"end": 18
+								}
+							]
+						},
+						"direction": "ltr"
 					}
 				]
+			},
+			"theme": {
+				"__TYPE__": "FieldContent",
+				"type": "Select",
+				"value": "Blue"
 			}
 		},
 		"items": [
 			{
 				"__TYPE__": "GroupItemContent",
 				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "withBackground",
-		"primary": {
-			"title": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading1",
-						"content": {
-							"text": "Plural"
-						}
-					}
-				]
-			},
-			"description": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Minim proident magna amet labore nostrud minim pariatur fugiat. Quis do proident sunt ipsum nisi sunt proident ullamco minim aute excepteur veniam. Voluptate velit laboris aliqua esse adipisicing dolor."
-						}
-					}
-				]
-			},
-			"toto": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": []
-					}
-				]
-			},
-			"buttons": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"cta_label",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Hello"
-								}
-							],
-							[
-								"cta_type",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "Primary",
-									"type": "Select"
-								}
-							]
-						]
-					},
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"cta_label",
-								{
-									"__TYPE__": "FieldContent",
-									"type": "Text",
-									"value": "Goodbye"
-								}
-							],
-							[
-								"cta_type",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "Text",
-									"type": "Select"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": [
-					[
-						"cta_label",
-						{
-							"__TYPE__": "FieldContent",
-							"value": "managed",
-							"type": "Text"
-						}
-					],
-					[
-						"cta_link",
-						{
-							"__TYPE__": "LinkContent",
-							"value": {
-								"__TYPE__": "ExternalLink",
-								"url": "http://twitter.com"
-							}
-						}
-					],
-					[
-						"cta_type",
-						{
-							"__TYPE__": "FieldContent",
-							"value": "Text",
-							"type": "Select"
-						}
-					]
-				]
 			}
 		]
 	}
