@@ -3,6 +3,7 @@ import { PrismicRichText } from "@prismicio/react";
 import { Container } from "@/components/Container";
 import { PrismicNextImage } from "@prismicio/next";
 import { ThemeContainer } from "@/components/Theme";
+import { Icon } from "@/components/Icon";
 
 export default function LogoCloudSimple({
   slice,
@@ -40,16 +41,41 @@ export default function LogoCloudSimple({
             className="mt-8 flex items-center justify-center gap-x-8 sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0"
           >
             <ul className="flex flex-col items-center gap-y-8 sm:flex-row sm:gap-x-12 sm:gap-y-0">
-              {slice.primary.logos?.map((company, idx) => (
-                <li key={idx} className="flex">
-                  <PrismicNextImage
-                    className="object-cover"
-                    field={company.logo}
-                    height={48}
-                    unoptimized
-                  />
-                </li>
-              ))}
+              {slice.primary.theme === "Dark" &&
+                slice.primary.logos?.map((company, idx) => {
+                  return company.logo.url?.includes(".svg") ? (
+                    <li key={idx} className="flex">
+                      <Icon
+                        src={company.logo.url}
+                        size="auto"
+                        color="light"
+                        className="h-12"
+                        fallback={company.logo}
+                      />
+                    </li>
+                  ) : (
+                    <li key={idx} className="flex">
+                      <PrismicNextImage
+                        className="object-cover"
+                        field={company.logo}
+                        height={48}
+                        imgixParams={{
+                          monochrome: "E2E8F0",
+                        }}
+                      />
+                    </li>
+                  );
+                })}
+              {themeColor === "light" &&
+                slice.primary.logos?.map((company, idx) => (
+                  <li key={idx} className="flex">
+                    <PrismicNextImage
+                      className="object-cover"
+                      field={company.logo}
+                      height={48}
+                    />
+                  </li>
+                ))}
             </ul>
           </div>
         </Container>
