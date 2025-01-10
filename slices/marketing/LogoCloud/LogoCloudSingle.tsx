@@ -4,6 +4,7 @@ import { PrismicNextImage } from "@prismicio/next";
 import { UnderlineDoodle } from "@/components/UnderlineDoodle";
 import { Container } from "@/components/Container";
 import { ThemeContainer } from "@/components/Theme";
+import { Icon } from "@/components/Icon";
 
 export default function LogoCloudSingle({
   slice,
@@ -37,12 +38,37 @@ export default function LogoCloudSingle({
             </span>
           </div>
           <div className="mt-8 flex items-center justify-center gap-x-8 sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0">
-            <div className="grid grid-cols-1 gap-y-8 overflow-hidden sm:mx-0 md:grid-cols-1 sm:gap-x-20 sm:gap-y-8">
-              <PrismicNextImage
+            <div className="grid grid-cols-1 gap-y-8 items-center overflow-hidden sm:mx-0 md:grid-cols-1 sm:gap-x-20 sm:gap-y-8">
+              {/* <PrismicNextImage
                 field={slice.primary.logo}
                 width={320}
                 unoptimized
-              />
+              /> */}
+              {/* Issue with image size not adapting to 320 px in svg */}
+              {themeColor === "dark" &&
+                (slice.primary.logo.url?.includes(".svg") ? (
+                  <Icon
+                    src={slice.primary.logo.url}
+                    // size="auto"
+                    color="light"
+                    className="w-80"
+                    fallback={slice.primary.logo}
+                  />
+                ) : (
+                  <PrismicNextImage
+                    field={slice.primary.logo}
+                    width={320}
+                    imgixParams={{
+                      monochrome: "E2E8F0",
+                    }}
+                  />
+                ))}
+              {themeColor === "light" && (
+                <PrismicNextImage
+                  field={slice.primary.logo}
+                  width={320}
+                />
+              )}
             </div>
           </div>
         </Container>
