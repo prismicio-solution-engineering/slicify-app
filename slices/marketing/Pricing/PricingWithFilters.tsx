@@ -77,7 +77,7 @@ export default function PricingWithFilters({
                 className={clsx(
                   "transition-opacity z-10",
                   isYearlyPricing && "opacity-50",
-                  "text-white"
+                  themeColor === "dark" ? "text-white" : "text-light-black"
                 )}
                 onClick={() => setIsYearlyPricing(false)}
               >
@@ -101,7 +101,7 @@ export default function PricingWithFilters({
                 className={clsx(
                   "transition-opacity z-10",
                   !isYearlyPricing && "opacity-50",
-                  "text-white"
+                  themeColor === "dark" ? "text-white" : "text-light-black"
                 )}
                 onClick={() => setIsYearlyPricing(true)}
               >
