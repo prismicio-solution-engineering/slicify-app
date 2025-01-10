@@ -13,7 +13,7 @@ export default function PricingWithFilters({
 }: {
   slice: Content.PricingSliceWithFilter;
 }) {
-  const [isYearlyPricing, setIsYearlyPricing] = useState(true);
+  const [isYearlyPricing, setIsYearlyPricing] = useState(false);
 
   const themeColor =
     slice.primary.theme === "Blue" || slice.primary.theme === "Dark"
@@ -75,7 +75,7 @@ export default function PricingWithFilters({
               <button
                 type="button"
                 className={clsx(
-                  "transition-opacity",
+                  "transition-opacity z-10",
                   isYearlyPricing && "opacity-50",
                   "text-white"
                 )}
@@ -85,7 +85,7 @@ export default function PricingWithFilters({
               </button>
               <button
                 type="button"
-                className="h-10 w-20 rounded-full bg-white p-1"
+                className="h-10 w-20 rounded-full bg-white p-1 z-10"
                 onClick={() => setIsYearlyPricing(!isYearlyPricing)}
               >
                 <span
@@ -99,7 +99,7 @@ export default function PricingWithFilters({
               <button
                 type="button"
                 className={clsx(
-                  "transition-opacity",
+                  "transition-opacity z-10",
                   !isYearlyPricing && "opacity-50",
                   "text-white"
                 )}
