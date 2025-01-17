@@ -49,9 +49,8 @@ export default function LogoCloudSingle({
                 (slice.primary.logo.url?.includes(".svg") ? (
                   <Icon
                     src={slice.primary.logo.url}
-                    // size="auto"
                     color="light"
-                    className="w-80"
+                    size="xl"
                     fallback={slice.primary.logo}
                   />
                 ) : (
@@ -64,10 +63,7 @@ export default function LogoCloudSingle({
                   />
                 ))}
               {themeColor === "light" && (
-                <PrismicNextImage
-                  field={slice.primary.logo}
-                  width={320}
-                />
+                <PrismicNextImage field={slice.primary.logo} width={320} />
               )}
             </div>
           </div>
