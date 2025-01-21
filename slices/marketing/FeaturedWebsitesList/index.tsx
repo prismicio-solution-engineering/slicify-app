@@ -1,4 +1,4 @@
-import { Content, IntegrationField, asText, isFilled } from "@prismicio/client";
+import { Content, IntegrationField, LinkField, asText, isFilled } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { ShowcaseCard } from "./ShowcaseCard";
 import { Container } from "@/components/Container";
@@ -15,11 +15,7 @@ export type Website = {
     url: string;
     alt?: string;
   };
-  link: {
-    link_type: string;
-    url: string;
-    target?: string;
-  };
+  link: LinkField;
   technology?: string;
   industry?: string;
 };
