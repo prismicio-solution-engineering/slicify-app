@@ -13,6 +13,7 @@ const iconStyles = cva("", {
       md: "w-12 h-12",
       lg: "w-16 h-16",
       xl: "w-80 h-auto",
+      xxl: "w-[200px] h-auto",
       auto: "w-auto",
     },
     color: {

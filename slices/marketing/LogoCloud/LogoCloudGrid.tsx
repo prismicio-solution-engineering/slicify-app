@@ -38,15 +38,14 @@ export default function LogoCloudGrid({
             className="mt-8 flex items-center justify-center gap-x-8 sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0"
           >
             <ul className="grid grid-cols-1 gap-y-8 overflow-hidden sm:mx-0 sm:grid-cols-2 md:grid-cols-3 sm:gap-x-20 sm:gap-y-8">
-            {themeColor === "dark" &&
+              {themeColor === "dark" &&
                 slice.primary.logos?.map((company, idx) => {
                   return company.logo.url?.includes(".svg") ? (
-                    <li key={idx} className="w-60 object-contain">
+                    <li key={idx} className="object-cover">
                       <Icon
                         src={company.logo.url}
-                        // size="auto"
-                        color="light"
-                        className="w-[200px]"
+                        size="xxl"
+                        color="white"
                         fallback={company.logo}
                       />
                     </li>
@@ -56,7 +55,7 @@ export default function LogoCloudGrid({
                         field={company.logo}
                         width={200}
                         imgixParams={{
-                          monochrome: "E2E8F0",
+                          monochrome: "FFFFFF",
                         }}
                       />
                     </li>
@@ -65,10 +64,7 @@ export default function LogoCloudGrid({
               {themeColor === "light" &&
                 slice.primary.logos?.map((company, idx) => (
                   <li key={idx} className="object-cover">
-                    <PrismicNextImage
-                      field={company.logo}
-                      width={200}
-                    />
+                    <PrismicNextImage field={company.logo} width={200} />
                   </li>
                 ))}
             </ul>

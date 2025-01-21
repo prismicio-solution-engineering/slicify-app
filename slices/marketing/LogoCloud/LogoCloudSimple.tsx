@@ -48,7 +48,7 @@ export default function LogoCloudSimple({
                       <Icon
                         src={company.logo.url}
                         size="auto"
-                        color="light"
+                        color="white"
                         className="h-12"
                         fallback={company.logo}
                       />
@@ -60,7 +60,7 @@ export default function LogoCloudSimple({
                         field={company.logo}
                         height={48}
                         imgixParams={{
-                          monochrome: "E2E8F0",
+                          monochrome: "FFFFFF",
                         }}
                       />
                     </li>

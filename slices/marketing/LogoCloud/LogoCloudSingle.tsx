@@ -39,17 +39,11 @@ export default function LogoCloudSingle({
           </div>
           <div className="mt-8 flex items-center justify-center gap-x-8 sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0">
             <div className="grid grid-cols-1 gap-y-8 items-center overflow-hidden sm:mx-0 md:grid-cols-1 sm:gap-x-20 sm:gap-y-8">
-              {/* <PrismicNextImage
-                field={slice.primary.logo}
-                width={320}
-                unoptimized
-              /> */}
-              {/* Issue with image size not adapting to 320 px in svg */}
               {themeColor === "dark" &&
                 (slice.primary.logo.url?.includes(".svg") ? (
                   <Icon
                     src={slice.primary.logo.url}
-                    color="light"
+                    color="white"
                     size="xl"
                     fallback={slice.primary.logo}
                   />
@@ -58,7 +52,7 @@ export default function LogoCloudSingle({
                     field={slice.primary.logo}
                     width={320}
                     imgixParams={{
-                      monochrome: "E2E8F0",
+                      monochrome: "FFFFFF",
                     }}
                   />
                 ))}
