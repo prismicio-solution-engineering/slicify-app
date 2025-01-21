@@ -19,7 +19,7 @@ export default function LogoCloudSimple({
     <section id={slice.primary.anchor || undefined}>
       <ThemeContainer
         theme={slice.primary.theme}
-        className="pb-16 pt-20 lg:pt-32"
+        className="py-16 lg:py-32"
       >
         <Container className="text-center">
           <PrismicRichText

@@ -19,7 +19,7 @@ export default function LogoCloudSingle({
   return (
     <section id={slice.primary.anchor || undefined}>
       <ThemeContainer theme={slice.primary.theme}>
-        <Container className="pb-16 pt-20 text-center lg:pt-32">
+        <Container className="py-16 text-center lg:py-32">
           <div
             className={`font-display text-3xl ${
               themeColor === "dark" ? "text-white" : "text-dark-gray"
