@@ -17,12 +17,12 @@
             "label": "Theme",
             "placeholder": "",
             "options": [
-              "Blue",
+              "White",
               "Dark",
               "Light",
-              "White"
+              "Blue"
             ],
-            "default_value": "Blue"
+            "default_value": "White"
           }
         },
         "title": {
@@ -105,12 +105,12 @@
             "label": "Theme",
             "placeholder": "",
             "options": [
-              "Blue",
+              "White",
               "Dark",
               "Light",
-              "White"
+              "Blue"
             ],
-            "default_value": "Blue"
+            "default_value": "White"
           }
         },
         "title": {
@@ -193,12 +193,12 @@
             "label": "Theme",
             "placeholder": "",
             "options": [
-              "Blue",
+              "White",
               "Dark",
               "Light",
-              "White"
+              "Blue"
             ],
-            "default_value": "Blue"
+            "default_value": "White"
           }
         },
         "title": {
@@ -301,12 +301,12 @@
             "label": "Theme",
             "placeholder": "",
             "options": [
-              "Blue",
+              "White",
               "Dark",
               "Light",
-              "White"
+              "Blue"
             ],
-            "default_value": "Blue"
+            "default_value": "White"
           }
         },
         "title": {

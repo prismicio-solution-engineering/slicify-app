@@ -17,12 +17,12 @@
             "label": "Theme",
             "placeholder": "",
             "options": [
-              "Blue",
+              "White",
               "Dark",
               "Light",
-              "White"
+              "Blue"
             ],
-            "default_value": "Blue"
+            "default_value": "White"
           }
         },
         "title": {
@@ -114,12 +114,12 @@
             "label": "Theme",
             "placeholder": "",
             "options": [
-              "Blue",
+              "White",
               "Dark",
               "Light",
-              "White"
+              "Blue"
             ],
-            "default_value": "Blue"
+            "default_value": "White"
           }
         },
         "title": {
@@ -211,12 +211,12 @@
             "label": "Theme",
             "placeholder": "",
             "options": [
-              "Blue",
+              "White",
               "Dark",
               "Light",
-              "White"
+              "Blue"
             ],
-            "default_value": "Blue"
+            "default_value": "White"
           }
         },
         "company_logo_column_1": {
@@ -339,12 +339,12 @@
             "label": "Theme",
             "placeholder": "",
             "options": [
-              "Blue",
+              "White",
               "Dark",
               "Light",
-              "White"
+              "Blue"
             ],
-            "default_value": "Blue"
+            "default_value": "White"
           }
         },
         "company_logo": {
@@ -419,12 +419,12 @@
             "label": "Theme",
             "placeholder": "",
             "options": [
-              "Blue",
+              "White",
               "Dark",
               "Light",
-              "White"
+              "Blue"
             ],
-            "default_value": "Blue"
+            "default_value": "White"
           }
         },
         "quote": {
