@@ -1,0 +1,74 @@
+{
+  "id": "catalogue",
+  "type": "SharedSlice",
+  "name": "Catalogue",
+  "description": "Catalogue",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "theme": {
+          "type": "Select",
+          "config": {
+            "label": "Theme",
+            "placeholder": "",
+            "options": [
+              "White",
+              "Dark",
+              "Light",
+              "Blue"
+            ],
+            "default_value": "White"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2,strong"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "products": {
+          "type": "Group",
+          "config": {
+            "label": "Products",
+            "repeat": true,
+            "fields": {
+              "product": {
+                "type": "IntegrationFields",
+                "config": {
+                  "catalog": "slicify-v3-template--hello_molly_sample_catalogue",
+                  "label": "Hello Molly sample products"
+                }
+              }
+            }
+          }
+        },
+        "anchor": {
+          "type": "Text",
+          "config": {
+            "label": "anchor",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

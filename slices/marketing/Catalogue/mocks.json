@@ -1,0 +1,37 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Id sit culpa id fugiat ex fugiat aute quis."
+						}
+					}
+				]
+			},
+			"products": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"website",
+								{
+									"__TYPE__": "IntegrationFieldsContent",
+									"value": "integration-field-product-id"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
