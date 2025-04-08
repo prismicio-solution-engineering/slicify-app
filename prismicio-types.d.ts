@@ -1436,12 +1436,12 @@ export interface CatalogueSliceDefaultPrimaryProductsItem {
   /**
    * Hello Molly sample products field in *Catalogue → Default → Primary → Products*
    *
-   * - **Field Type**: Integration Fields (Catalog: `slicify-v3-template--hello_molly_sample_products`)
+   * - **Field Type**: Integration Fields (Catalog: `slicify-v3-template--hello_molly_sample_catalogue`)
    * - **Placeholder**: *None*
-   * - **API ID Path**: catalogue.default.primary.products[].website
+   * - **API ID Path**: catalogue.default.primary.products[].product
    * - **Documentation**: https://prismic.io/docs/field#integration
    */
-  website: prismic.IntegrationField;
+  product: prismic.IntegrationField;
 }
 
 /**
