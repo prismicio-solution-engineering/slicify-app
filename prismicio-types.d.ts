@@ -697,7 +697,6 @@ export type HeaderDocument<Lang extends string = string> =
   >;
 
 type HomePageDocumentDataSlicesSlice =
-  | CatalogueSlice
   | TeamSlice
   | FeaturesSlice
   | PricingSlice
