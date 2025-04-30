@@ -21,11 +21,11 @@ async function main() {
   if (!manager.user.checkIsLoggedIn()) {
     throw new Error("You are not logged in. Please log in first with `npx prismic-cli login` and try again.");
   }
-  
+
   await manager.plugins.initPlugins();
 
-  const { models: slices} = await manager.slices.readAllSlices();
-  const { models: customtypes} = await manager.customTypes.readAllCustomTypes();
+  const { models: slices } = await manager.slices.readAllSlices();
+  const { models: customtypes } = await manager.customTypes.readAllCustomTypes();
 
   console.log(
     "Syncing %o slices and %o custom types to %o sub-repositories",
