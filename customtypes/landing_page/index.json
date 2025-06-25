@@ -18,10 +18,10 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "job_list": {
+            "team": {
               "type": "SharedSlice"
             },
-            "team": {
+            "job_list": {
               "type": "SharedSlice"
             },
             "pricing": {
